@@ -1,0 +1,42 @@
+.container {
+    padding: 40px 0;
+    border-top: 1px solid #C3C7CA;
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text_part {
+    width: 100%;
+    max-width: 372px;
+    p {
+        color: #AAAFB4;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+    
+        &:last-child {
+            margin-top: 16px;
+        }
+    }
+}
+
+.links_block {
+    width: 100%;
+    max-width: 236px;
+
+    p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+    
+        a {
+            color: #1E2322;
+            text-decoration: none;
+        }
+    }
+}
