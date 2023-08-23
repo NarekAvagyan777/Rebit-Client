@@ -1,0 +1,19 @@
+.header {
+    height: 80px;
+    display: flex;
+    // padding: 0px 40px 40px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00DA49;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 8px 12px 8px 20px;
+    border: none;
+    gap: 4px;
+}
