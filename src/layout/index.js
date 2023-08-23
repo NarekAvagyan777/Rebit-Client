@@ -1,7 +1,6 @@
-import React from 'react'
+import Header from "./Header/Header"
 
-export default function index() {
-  return (
-    <div>index</div>
-  )
+
+export {
+    Header,   
 }
