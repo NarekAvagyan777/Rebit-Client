@@ -1,0 +1,33 @@
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 60px;
+    color: #004538;
+}
+
+.container {
+    margin: 120px 0px;
+}
+
+.content_wrapper {
+    display: flex;
+    column-gap: 50px;
+
+    > div {
+        flex: 420px 1 1;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        p {
+            color: #1E2322;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 60px;
+            margin-top: 16px;
+        }
+    }
+}
