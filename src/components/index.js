@@ -1,7 +1,5 @@
-import React from 'react'
+import ContactUs from "./ContactUs/ContactUs";
 
-export default function index() {
-  return (
-    <div>index</div>
-  )
+export default {
+  ContactUs
 }
