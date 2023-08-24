@@ -7,7 +7,7 @@ import Slider from "./Slider/Slider";
 export {
   HomePageTitle,
   ContactUs,
-  Slider
+  Slider,
   Services,
   FeaturedProjects
 }
