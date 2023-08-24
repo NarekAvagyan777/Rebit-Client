@@ -6,6 +6,36 @@
 .content_wrapper {
     display: flex;
     justify-content: space-between;
+
+    &__icons_block {
+        border-bottom: 1px solid #C3C7CA;
+        padding-bottom: 11px;
+
+        img:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    &__contact_block {
+        padding-top: 11px;
+
+        div {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+
+            span {
+                color: #1E2322;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+
+        div:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 .text_part {
@@ -39,4 +69,9 @@
             text-decoration: none;
         }
     }
+}
+
+.contact_block {
+    width: 100%;
+    max-width: 426.7px;
 }
