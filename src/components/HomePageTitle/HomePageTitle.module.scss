@@ -1,0 +1,29 @@
+.container {
+    
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 120;
+    h1 {
+        font-size: 5rem;
+        color: #004538;
+        font-weight: 800;
+        line-height: 120px;
+    }
+    span {
+       color:#00DA49;
+       display: block;
+    }
+    
+}
+.wrapper {
+    display: flex;
+    margin: 120px 0
+}
+
+.logo_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

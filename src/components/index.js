@@ -1,5 +1,7 @@
 import ContactUs from "./ContactUs/ContactUs";
+import HomePageTitle from "./HomePageTitle/HomePageTitle";
 
-export default {
+export {
+  HomePageTitle,
   ContactUs
 }
