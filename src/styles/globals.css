@@ -6,6 +6,25 @@
   margin: 0;
 }
 
+.carousel-status {
+  display: none;
+}
+
+.carousel-slider.carousel {
+  position: relative;
+  overflow: visible;
+}
+
+.control-dots {
+  position: absolute;
+  bottom: -58px !important;
+  /* z-index: 1000; */
+  /* bottom: 1px; */
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+
 ul, li {
   list-style: none;
 }
