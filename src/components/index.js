@@ -1,7 +1,5 @@
-import React from 'react'
+import HomePageTitle from "./HomePageTitle/HomePageTitle";
 
-export default function index() {
-  return (
-    <div>index</div>
-  )
+export {
+  HomePageTitle
 }
