@@ -16,13 +16,13 @@ export default function ContactUs() {
           className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}
         >
           <div>
-            <input type="text" />
+            <input type="text" placeholder="Name Surname" />
           </div>
           <div>
-            <input type="text" />
+            <input type="text" placeholder="Email" />
           </div>
           <div>
-            <textarea type="text" />
+            <textarea type="text" placeholder="Project Details (Optional)" />
           </div>
           <div>
             <button className={styles.button}>
