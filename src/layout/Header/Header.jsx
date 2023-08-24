@@ -1,8 +1,8 @@
+import Link from 'next/link'
+import Image from 'next/image'
 import Logo from '@/assets/image/logo/Logo_color.png'
 import ArrowRight from '@/assets/image/icons/arrow_right.svg'
-import Image from 'next/image'
 import header from './header.module.scss'
-import Link from 'next/link'
 
 function Header() {
   return (
