@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import { FeaturedProjects, HomePageTitle, Slider } from '@/components'
+import { HomePageTitle, Services, FeaturedProjects, Slider } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePageTitle />
+      <Services />
       <FeaturedProjects />
       <Slider />
     </>
