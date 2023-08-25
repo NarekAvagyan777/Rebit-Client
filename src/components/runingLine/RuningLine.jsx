@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
-import styles from "@/styles/RuningLine.module.scss";
+import styles from "./RuningLine.module.scss";
 const RuningLine = () => {
   const items = [
     "Branding",
@@ -104,9 +104,6 @@ const RuningLine = () => {
         // autoFill={true}
         delay={0}
         speed={100}
-        onFinish={() => {
-          console.log("finished 1");
-        }}
         loop={0}
       >
         {rows[0]}
@@ -118,9 +115,6 @@ const RuningLine = () => {
         // autoFill={true}
         delay={0}
         speed={100}
-        onFinish={() => {
-          console.log("finished 2");
-        }}
         loop={0}
       >
         {rows[1]}
@@ -132,9 +126,6 @@ const RuningLine = () => {
         // autoFill={true}
         delay={0}
         speed={100}
-        onFinish={() => {
-          console.log("finished 3");
-        }}
         loop={0}
       >
         {rows[2]}
