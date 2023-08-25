@@ -7,6 +7,7 @@
 }
 .button {
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     background-color: #00DA49;
@@ -44,6 +45,10 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
+  }
+
+  .navItem a:hover {
+    color: #00da49;
   }
 
   

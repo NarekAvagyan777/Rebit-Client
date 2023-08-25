@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className={header.header}>
       <div>
-        <Image src={Logo} height={38} />
+        <Link href='/'><Image src={Logo} height={38} /></Link>
       </div>
 <div className={header.container}>
 

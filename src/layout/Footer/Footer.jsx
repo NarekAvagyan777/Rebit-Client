@@ -63,12 +63,12 @@ export default function Footer() {
             className={`${styles.content_wrapper__element} ${styles.contact_block}`}
           >
             <div className={styles.content_wrapper__icons_block}>
-              <Image src={linkedin} />
-              <Image src={facebook} />
-              <Image src={instagram} />
-              <Image src={be} />
-              <Image src={rocket} />
-              <Image src={github} />
+              <a href="https://www.linkedin.com/company/rebitai/mycompany/verification/" target="_blank"><Image src={linkedin} /></a>
+              <a href="https://www.facebook.com/ReBitAI" target="_blank"><Image src={facebook} /></a>
+              {/* <a href=""><Image src={instagram} /></a>
+              <a href=""><Image src={be} /></a>
+              <a href=""><Image src={rocket} /></a>
+              <a href=""><Image src={github} /></a> */}
             </div>
             <div className={styles.content_wrapper__contact_block}>
               <div>
