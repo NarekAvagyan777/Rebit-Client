@@ -15,6 +15,7 @@ export default function Slider() {
         />
       </Head>
       <Carousel
+        infiniteLoop={true}
         emulateTouch={true}
         showArrows={false}
         renderIndicator={(onClickHandler, isSelected, index, label) => {

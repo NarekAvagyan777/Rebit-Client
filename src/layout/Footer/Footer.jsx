@@ -69,6 +69,7 @@ export default function Footer() {
               <a href=""><Image src={be} /></a>
               <a href=""><Image src={rocket} /></a>
               <a href=""><Image src={github} /></a> */}
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
             </div>
             <div className={styles.content_wrapper__contact_block}>
               <div>
