@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
@@ -16,7 +15,7 @@ export default function Slider() {
         />
       </Head>
       <Carousel
-        
+        emulateTouch={true}
         showArrows={false}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {

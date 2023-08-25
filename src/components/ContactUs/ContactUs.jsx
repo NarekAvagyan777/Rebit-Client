@@ -26,7 +26,7 @@ export default function ContactUs() {
           </div>
           <div>
             <button className={styles.button}>
-              Let’s talk
+              Submit
               <Image src={ArrowRight} />
             </button>
           </div>
