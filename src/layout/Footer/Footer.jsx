@@ -1,15 +1,16 @@
-import Image from "next/image";
-import styles from "./footer.module.scss";
-import ContactUs from "@/components/ContactUs/ContactUs";
-import linkedin from "@/assets/image/icons/linkedin.svg";
-import facebook from "@/assets/image/icons/facebook.svg";
-import instagram from "@/assets/image/icons/instagram.svg";
-import be from "@/assets/image/icons/be.svg";
-import rocket from "@/assets/image/icons/rocket.svg";
-import github from "@/assets/image/icons/github.svg";
-import mail from "@/assets/image/icons/mail.svg";
-import phone from "@/assets/image/icons/phone_in_talk.svg";
-import location from "@/assets/image/icons/location.svg";
+import Image from 'next/image'
+import styles from './footer.module.scss'
+import ContactUs from '@/components/ContactUs/ContactUs'
+import linkedin from '@/assets/image/icons/linkedin.svg'
+import facebook from '@/assets/image/icons/facebook.svg'
+import instagram from '@/assets/image/icons/instagram.svg'
+import be from '@/assets/image/icons/be.svg'
+import rocket from '@/assets/image/icons/rocket.svg'
+import github from '@/assets/image/icons/github.svg'
+import mail from '@/assets/image/icons/mail.svg'
+import phone from '@/assets/image/icons/phone_in_talk.svg'
+import location from '@/assets/image/icons/location.svg'
+import tw from '@/assets/image/icons/tw.svg'
 
 export default function Footer() {
   return (
@@ -63,8 +64,18 @@ export default function Footer() {
             className={`${styles.content_wrapper__element} ${styles.contact_block}`}
           >
             <div className={styles.content_wrapper__icons_block}>
-              <a href="https://www.linkedin.com/company/rebitai/mycompany/verification/" target="_blank"><Image src={linkedin} /></a>
-              <a href="https://www.facebook.com/ReBitAI" target="_blank"><Image src={facebook} /></a>
+              <a
+                href="https://www.linkedin.com/company/rebitai/mycompany/verification/"
+                target="_blank"
+              >
+                <Image src={linkedin} />
+              </a>
+              <a href="https://www.facebook.com/ReBitAI" target="_blank">
+                <Image src={facebook} />
+              </a>
+              <a href="#">
+                <Image src={tw} />
+              </a>
               {/* <a href=""><Image src={instagram} /></a>
               <a href=""><Image src={be} /></a>
               <a href=""><Image src={rocket} /></a>
@@ -88,5 +99,5 @@ export default function Footer() {
         </div>
       </div>
     </>
-  );
+  )
 }
