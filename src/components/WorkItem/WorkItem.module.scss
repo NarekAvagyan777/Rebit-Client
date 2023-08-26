@@ -1,0 +1,27 @@
+.works_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 120px;
+  padding: 0 0 120px 0;
+  h3 {
+    color: #1e2322;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px; /* 166.667% */
+  }
+  p {
+    color: #aaafb4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+  }
+}
+.work_item {
+  //   width: 50%; /* Each item takes up 50% of the container width */
+  //   box-sizing: border-box; /* Includes padding and border in width */
+  //   border: 1px solid #ccc;
+  //   padding: 20px;
+}

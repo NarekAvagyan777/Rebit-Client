@@ -68,19 +68,21 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/rebitai/mycompany/verification/"
                 target="_blank"
               >
-                <Image src={linkedin} />
+                <Image src={linkedin} alt='linkedin'/>
               </a>
               <a href="https://www.facebook.com/ReBitAI" target="_blank">
-                <Image src={facebook} />
+                <Image src={facebook} alt='facebook'/>
               </a>
               <a href="#">
-                <Image src={tw} />
+                <Image src={tw} alt='twitter'/>
               </a>
               {/* <a href=""><Image src={instagram} /></a>
               <a href=""><Image src={be} /></a>
               <a href=""><Image src={rocket} /></a>
               <a href=""><Image src={github} /></a> */}
-              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="">
+                <i className="fa fa-twitter" aria-hidden="true"></i>
+              </a>
             </div>
             <div className={styles.content_wrapper__contact_block}>
               <div>

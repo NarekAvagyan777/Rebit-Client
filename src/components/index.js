@@ -4,6 +4,8 @@ import Services from "./Services/Services";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 import Slider from "./Slider/Slider";
 import RuningLine from "./runingLine";
+import FilterButtons from "./FilterButton/FilterButton";
+import WorkItem from "./WorkItem/WorkItem";
 
 export {
   HomePageTitle,
@@ -11,5 +13,7 @@ export {
   Slider,
   Services,
   FeaturedProjects,
-  RuningLine
+  RuningLine,
+  FilterButtons,
+  WorkItem
 }
