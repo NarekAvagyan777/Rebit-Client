@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from '@/pages/Work/Work.module.scss'
 import { FilterButtons, WorkItem } from '@/components'
-import Img1 from '@/assets/image/img/img3.png'
-import Img2 from '@/assets/image/img/img2.png'
+import Img1 from '@/assets/image/img/img3.svg'
+import Img2 from '@/assets/image/img/img2.svg'
 
 const filters = [
   'All',
@@ -20,36 +20,42 @@ const works = [
     img: Img1,
     title: 'Starbucks',
     desc: 'Branding, Mobile app',
+    color:"green"
   },
   {
     id: 2,
     img: Img2,
     title: 'Starbucks',
     desc: 'Product Design, Web app',
+    color:"blue"
   },
   {
     id: 3,
     img: Img2,
     title: 'Starbucks',
     desc: 'Branding, Mobile app',
+    color:"blue"
   },
   {
     id: 4,
     img: Img1,
     title: 'Starbucks',
     desc: 'Product Design, Web app',
+    color:"green"
   },
   {
     id: 5,
     img: Img1,
     title: 'Starbucks',
     desc: 'Branding, Mobile app',
+    color:"green"
   },
   {
     id: 6,
     img: Img2,
     title: 'Starbucks',
     desc: 'Product Design, Web app',
+    color:"blue"
   },
 ]
 
