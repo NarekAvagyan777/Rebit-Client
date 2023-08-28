@@ -4,9 +4,7 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import linkedin from '@/assets/image/icons/linkedin.svg'
 import facebook from '@/assets/image/icons/facebook.svg'
 import instagram from '@/assets/image/icons/instagram.svg'
-import be from '@/assets/image/icons/be.svg'
-import rocket from '@/assets/image/icons/rocket.svg'
-import github from '@/assets/image/icons/github.svg'
+import { TwitterIcon, FacebookIcon, LinkedinIcon } from '@/components'
 import mail from '@/assets/image/icons/mail.svg'
 import phone from '@/assets/image/icons/phone_in_talk.svg'
 import location from '@/assets/image/icons/location.svg'
@@ -64,22 +62,9 @@ export default function Footer() {
             className={`${styles.content_wrapper__element} ${styles.contact_block}`}
           >
             <div className={styles.content_wrapper__icons_block}>
-              <a
-                href="https://www.linkedin.com/company/rebitai/mycompany/verification/"
-                target="_blank"
-              >
-                <Image src={linkedin} alt='linkedin'/>
-              </a>
-              <a href="https://www.facebook.com/ReBitAI" target="_blank">
-                <Image src={facebook} alt='facebook'/>
-              </a>
-              <a href="#">
-                <Image src={tw} alt='twitter'/>
-              </a>
-              {/* <a href=""><Image src={instagram} /></a>
-              <a href=""><Image src={be} /></a>
-              <a href=""><Image src={rocket} /></a>
-              <a href=""><Image src={github} /></a> */}
+                <LinkedinIcon />
+                <FacebookIcon />
+                <TwitterIcon />
               <a href="">
                 <i className="fa fa-twitter" aria-hidden="true"></i>
               </a>
