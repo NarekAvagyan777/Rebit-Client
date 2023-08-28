@@ -6,6 +6,9 @@ import Slider from "./Slider/Slider";
 import RuningLine from "./runingLine";
 import FilterButtons from "./FilterButton/FilterButton";
 import WorkItem from "./WorkItem/WorkItem";
+import LinkedinIcon from "./LinkedinIcon/LinkedinIcon";
+import FacebookIcon from "./FacebookIcon/FacebookIcon";
+import TwitterIcon from "./TwitterIcon/TwitterIcon";
 
 export {
   HomePageTitle,
@@ -15,5 +18,8 @@ export {
   FeaturedProjects,
   RuningLine,
   FilterButtons,
-  WorkItem
+  WorkItem,
+  LinkedinIcon,
+  FacebookIcon,
+  TwitterIcon
 }
