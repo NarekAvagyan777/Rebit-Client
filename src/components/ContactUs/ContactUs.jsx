@@ -1,36 +1,173 @@
-import Image from "next/image";
-import styles from "./contactus.module.scss";
-import ArrowRight from "@/assets/image/icons/arrow_right.svg";
-import map from "@/assets/image/img/map.png";
-import mail from '@/assets/image/icons/mail.svg';
-import phone from '@/assets/image/icons/phone_in_talk.svg';
-import location from '@/assets/image/icons/location.svg';
+'use client'
+import Image from 'next/image'
+import styles from './contactus.module.scss'
+import ArrowRight from '@/assets/image/icons/arrow_right.svg'
+import map from '@/assets/image/img/map.png'
+import mail from '@/assets/image/icons/mail.svg'
+import phone from '@/assets/image/icons/phone_in_talk.svg'
+import location from '@/assets/image/icons/location.svg'
+import success from '@/assets/image/icons/success.svg'
+import { useEffect, useState } from 'react'
 
-export default function ContactUs() {
+function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    general: '',
+  })
+
+  const [checked, setChecked] = useState(false)
+  const [sended, setSended] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    const { name, email, message } = formData
+    if (name && email) {
+      setChecked(true)
+    }
+  }, [formData])
+
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailPattern.test(email)
+  }
+
+  const handleInputChange = (e) => {
+    console.log(e)
+    const { name, value } = e.target
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }))
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: '',
+    }))
+  }
+
+  const newErrors = {
+    name: !formData.name ? 'Please enter your first name' : '',
+    email: !formData.email ? 'Please enter your email' : '',
+    general: '',
+  }
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault()
+
+      if (formData.email && !validateEmail(formData.email)) {
+        newErrors.email = 'Invalid email format'
+      }
+
+      if (!newErrors.name && !newErrors.email) {
+        setErrors({ ...newErrors })
+        setChecked(true)
+
+
+        console.log('Form submitted with:', formData)
+
+        // const res = await axios.post(
+        //   'https://rebit-server.onrender.com/api/contactUs',
+        //   {
+        //     firstName: formData.name,
+        //     lastName: formData.lastname,
+        //     email: formData.email,
+        //     message: formData.message,
+        //   },
+        // )
+        await new Promise((resolve) => setTimeout(resolve, 2000))
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        })
+        setSended(true)
+        setTimeout(() => {
+          setSended(false);
+          setIsLoading(false); // Set loading state to false after 5 seconds
+        }, 5000);
+      } else {
+        newErrors.general = 'Please fill in all required fields'
+        setErrors({ ...newErrors })
+        setChecked(false)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Let’s collaborate</h2>
 
       <div className={styles.content_wrapper}>
-        <div
-          className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}
-        >
-          <div>
-            <input type="text" placeholder="Name Surname" />
+        {!sended ? (
+          <div
+            className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}
+          >
+            <div>
+              <input
+                type="text"
+                // style={{
+                //   borderBottomColor: !checked && errors.email ? 'red' : '#c3c7ca',
+                // }}
+                className={`${styles.form_control} ${
+                  !checked && errors.name ? styles.error_req : ''
+                }`}
+                name="name"
+                placeholder="Name Surname"
+                value={formData.name}
+                onChange={(e) => handleInputChange(e)}
+              />
+              {errors.name ? (
+                <p className={styles.error_text}>{errors.name}</p>
+              ) : null}
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={(e) => handleInputChange(e)}
+                className={`${styles.form_control} ${
+                  !checked && errors.email ? styles.error_req : ''
+                }`}
+              />
+              {errors.email ? (
+                <p className={styles.error_text}>{errors.email}</p>
+              ) : null}
+            </div>
+            <div>
+              <textarea
+                type="message"
+                name="message"
+                placeholder="Project Details (Optional)"
+                value={formData.message}
+                onChange={(e) => handleInputChange(e)}
+              />
+            </div>
+            <div>
+              <button className={styles.button} onClick={handleSubmit}>
+                Submit
+                <Image src={ArrowRight} />
+              </button>
+            </div>
           </div>
-          <div>
-            <input type="text" placeholder="Email" />
-          </div>
-          <div>
-            <textarea type="text" placeholder="Project Details (Optional)" />
-          </div>
-          <div>
-            <button className={styles.button}>
-              Submit
-              <Image src={ArrowRight} />
-            </button>
-          </div>
-        </div>
+        ) : (
+          <div className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}>
+            <div className={styles.success}>
+              <Image src={success} />
+               <p>Message sent!</p>
+            </div>         
+       </div>
+        )}
 
         <div
           className={`${styles.content_wrapper__element} ${styles.content_wrapper__contact}`}
@@ -55,5 +192,6 @@ export default function ContactUs() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+export default ContactUs
