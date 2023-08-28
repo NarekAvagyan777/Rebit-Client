@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ServicesText from "./ServicesText/ServicesText";
-import Styles from "@/components/Services/Services.module.scss";
+import Styles from'./Services.module.scss';
 
 function Services() {
   const pages = {

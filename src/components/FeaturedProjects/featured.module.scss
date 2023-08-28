@@ -1,13 +1,15 @@
+.container {
+    margin: 120px auto;
+    max-width: 1520px;
+    padding: 0 40px;
+}
+
 .title {
     text-align: center;
     margin-bottom: 40px;
     font-size: 40px;
     line-height: 60px;
     color: #004538;
-}
-
-.container {
-    margin: 120px 0px;
 }
 
 .content_wrapper {

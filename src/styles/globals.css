@@ -101,9 +101,9 @@ a {
 
 html,
 body {
-  max-width: 1520px;
-  padding: 0 40px;
-  margin: 0 auto;
+  /* max-width: 1520px; */
+  /* padding: 0 40px; */
+  /* margin: 0 auto; */
   overflow-x: hidden;
   font-family: 'Poppins';
 }
