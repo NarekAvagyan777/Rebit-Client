@@ -1,3 +1,10 @@
+.container {
+    margin: 0 auto;
+    margin-bottom: 120px;
+    max-width: 1520px;
+    padding: 0 40px;
+}
+
 .title {
   text-align: center;
   margin-bottom: 40px;
@@ -6,9 +13,11 @@
   color: #004538;
 }
 
+
 .container {
   margin-bottom: 120px;
 }
+
 
 .button {
   display: flex;
