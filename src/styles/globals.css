@@ -25,7 +25,8 @@
   column-gap: 8px;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -34,7 +35,7 @@ a {
 }
 
 :root {
-  --max-width: 1100px;
+  /* --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -66,12 +67,12 @@ a {
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --card-border-rgb: 131, 134, 135; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    /* --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
 
@@ -94,7 +95,7 @@ a {
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
+    --card-border-rgb: 200, 200, 200; */
   }
 }
 
@@ -123,7 +124,7 @@ body {
 } */
 
 @media (prefers-color-scheme: dark) {
-  html {
+  /* html {
     color-scheme: dark;
-  }
+  } */
 }
