@@ -69,7 +69,7 @@ function Work() {
   }
 
   return (
-    <div>
+    <div className={styles.workMainCont}>
       <div className={styles.title_container}>
         <h1>Our work</h1>
       </div>
