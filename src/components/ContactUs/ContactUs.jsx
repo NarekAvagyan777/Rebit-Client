@@ -6,7 +6,7 @@ import map from '@/assets/image/img/map.png'
 import mail from '@/assets/image/icons/mail.svg'
 import phone from '@/assets/image/icons/phone_in_talk.svg'
 import location from '@/assets/image/icons/location.svg'
-import success from '@/assets/image/icons/success.svg'
+import success from '@/assets/image/icons/Success.svg'
 import { useEffect, useState } from 'react'
 
 function ContactUs() {
