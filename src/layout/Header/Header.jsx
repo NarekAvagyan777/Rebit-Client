@@ -34,31 +34,31 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/Startups"
-                style={route === '/startups' ? { color: '#00DA49' } : {}}
+                style={route === '/Startups' ? { color: '#00DA49' } : {}}
               >
                 Startups
               </Link>
             </li>
             <li className={header.navItem}>
               <Link
-                href="/AboutusUs"
-                style={route === '/AboutusUs' ? { color: '#00DA49' } : {}}
+                href="/aboutus"
+                style={route === '/aboutus' ? { color: '#00DA49' } : {}}
               >
                 About Us
               </Link>
             </li>
             <li className={header.navItem}>
               <Link
-                href="/Blog"
-                style={route === '/Blog' ? { color: '#00DA49' } : {}}
+                href="/blog"
+                style={route === '/blog' ? { color: '#00DA49' } : {}}
               >
                 Blog
               </Link>
             </li>
             <li className={header.navItem}>
               <Link
-                href="/Academy"
-                style={route === '/Academy' ? { color: '#00DA49' } : {}}
+                href="/academy"
+                style={route === '/academy' ? { color: '#00DA49' } : {}}
               >
                 Academy
               </Link>
