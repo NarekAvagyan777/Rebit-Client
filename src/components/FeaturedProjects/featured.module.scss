@@ -1,35 +1,70 @@
 .container {
-    margin: 120px auto;
-    max-width: 1520px;
-    padding: 0 40px;
+  margin: 120px auto;
+  max-width: 1520px;
+  padding: 0 40px;
 }
 
 .title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 40px;
-    line-height: 60px;
-    color: #004538;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 60px;
+  color: #004538;
 }
 
 .content_wrapper {
-    display: flex;
-    column-gap: 50px;
-
-    > div {
-        flex: 420px 1 1;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        p {
-            color: #1E2322;
-            font-size: 36px;
-            font-weight: 500;
-            line-height: 60px;
-            margin-top: 16px;
-        }
-    }
+  display: flex;
+  justify-content: space-between;
 }
+.itemCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+}
+.dashBoard__green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cde8e1;
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+  overflow: hidden;
+}
+.dashBoard__blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #8b81de 50%, #f8f8f8 50%);
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+  overflow: hidden;
+}
+.projectImage {
+  width: 370px;
+  height: 370px;
+  transition: transform 0.7s, visibility 0.7s ease-in;
+}
+.projectText {
+  color: #1e2322;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 60px;
+}
+.itemCont .projectText  {
+  transition:  transform 0.7s, color 0.7s;
+}
+.itemCont:hover .projectImage {
+  transform: scale(1.25);
+}
+
+.itemCont:hover .projectText {
+  color: #00da49;
+  transform: translateY(-10px);
+}
+
+
