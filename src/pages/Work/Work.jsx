@@ -73,7 +73,7 @@ function Work() {
       <div className={styles.title_container}>
         <h1>Our work</h1>
       </div>
-      <div>
+      {/* <div>
         <FilterButtons
           filters={filters}
           onFilter={handleFilter}
@@ -82,7 +82,7 @@ function Work() {
       </div>
       <div className={styles.works_container}>
         <WorkItem works={works} />
-      </div>
+      </div> */}
     </div>
   )
 }
