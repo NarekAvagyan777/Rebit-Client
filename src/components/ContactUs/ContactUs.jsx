@@ -103,7 +103,7 @@ function ContactUs() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='contactus'>
       <h2 className={styles.title}>Let’s collaborate</h2>
 
       <div className={styles.content_wrapper}>
