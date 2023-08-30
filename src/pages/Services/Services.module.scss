@@ -18,9 +18,10 @@
   // align-items: center;
   // flex-direction: column;
 }
+
 .titleContainer {
-  // display: flex;
   width: 40%;
+
   div {
     display: flex;
     padding: 12px 0px;
@@ -28,6 +29,17 @@
     align-self: stretch;
     border-bottom: 1px solid #dddfe1;
     flex-wrap: nowrap;
+
+    a {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+
+      &:visited {
+        color: #1e2322;
+      }
+    }
   }
 }
 .contentContainer {
@@ -58,5 +70,20 @@
     font-weight: 500;
     line-height: 36px; /* 180% */
     margin-left: 22px;
+  }
+}
+
+.contentContainer:not(:first-child) {
+  margin-top: 80px;
+}
+
+
+.titleContainer {
+  .active {
+    border-color: #00DA49;
+
+    a {
+      color: #00DA49 !important;
+    }
   }
 }
