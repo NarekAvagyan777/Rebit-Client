@@ -1,6 +1,7 @@
-'use client'
-import React from 'react'
-import styles from '@/pages/Services/Services.module.scss'
+"use client";
+import Link from "next/link";
+import styles from "@/pages/Services/Services.module.scss";
+import { useEffect } from "react";
 
 function Services() {
   return (
@@ -9,19 +10,19 @@ function Services() {
       <div className={styles.innerContainer}>
         <div className={styles.titleContainer}>
           <div className={styles.linkitem}>
-            <a>Research & Product Discovery</a>
+            <Link href="#research">Research & Product Discovery</Link>
           </div>
           <div className={styles.linkitem}>
-            <a>Product Design & UX/UI</a>
+            <Link href="#design">Product Design & UX/UI</Link>
           </div>
           <div className={styles.linkitem}>
-            <a>Branding & Strategy</a>
+            <Link href="#branding">Branding & Strategy</Link>
           </div>
           <div className={styles.linkitem}>
-            <a>Software Engineering</a>
+            <Link href="#software">Software Engineering</Link>
           </div>
           <div className={styles.linkitem}>
-            <a>Scale & Maintenance</a>
+            <Link href="#scale">Scale & Maintenance</Link>
           </div>
         </div>
         <div>
@@ -52,10 +53,121 @@ function Services() {
               </ul>
             </div>
           </div>
+
+          <div className={styles.contentContainer}>
+            <h2>Product Design & UX/UI</h2>
+            <p>
+              Intuitive design is a must-have for any software product. Our
+              product design team specializes in creating user interfaces both
+              aesthetically pleasing and easy to use.
+            </p>
+            <div>
+              <p>
+                <b>What we do:</b>
+              </p>
+              <ul>
+                <li>
+                  Business process <b>audit</b> and <b>UX analytics</b>
+                </li>
+                <li>
+                  <b>User testing</b>
+                </li>
+                <li>
+                  Mobile and web <b>interface design</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.contentContainer}>
+            <h2>Branding & Strategy</h2>
+            <p>
+              At the core of our approach, we maintain that brand and UX are
+              closely connected and work together. Our team specializes in
+              creating and representing digital brand identities across
+              channels, providing strategy assistance and guidelines to ensure
+              consistency.
+            </p>
+            <div>
+              <p>
+                <b>What we do:</b>
+              </p>
+              <ul>
+                <li>
+                  Brand <b>Strategy</b>
+                </li>
+                <li>
+                  Brand <b>Architecture</b>
+                </li>
+                <li>
+                  <b>Visual</b> identity
+                </li>
+                <li>
+                  Brand <b>Guidelines</b>
+                </li>
+                <li>
+                  Brand <b>Experiences</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.contentContainer}>
+            <h2>Software Engineering</h2>
+            <p>
+              Our team of experts ensure that your software product is
+              complete and polished using a multidisciplinary approach and
+              rigorous QA methods regardless of the platform.
+            </p>
+            <div>
+              <p>
+                <b>What we do:</b>
+              </p>
+              <ul>
+                <li>
+                  <b>Web</b> app development
+                </li>
+                <li>
+                  <b>Mobile</b> app development
+                </li>
+                <li>
+                  <b>Quality Assurance</b>
+                </li>
+                <li>
+                  <b>AI</b>-powered apps
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.contentContainer}>
+            <h2>Scale & Maintenance</h2>
+            <p>
+              Intuitive design is a must-have for any software product. Our
+              product design team specializes in creating user interfaces both
+              aesthetically pleasing and easy to use.
+            </p>
+            <div>
+              <p>
+                <b>What we do:</b>
+              </p>
+              <ul>
+                <li>
+                  Business process <b>audit</b> and <b>UX analytics</b>
+                </li>
+                <li>
+                  <b>User testing</b>
+                </li>
+                <li>
+                  Mobile and web <b>interface design</b>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Services
+export default Services;
