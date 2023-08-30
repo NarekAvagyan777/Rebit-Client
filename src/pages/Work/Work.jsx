@@ -79,10 +79,10 @@ function Work() {
           onFilter={handleFilter}
           selectedFilter={selectedFilter}
         />
-      </div>
+      </div> */}
       <div className={styles.works_container}>
         <WorkItem works={works} />
-      </div> */}
+      </div>
     </div>
   )
 }
