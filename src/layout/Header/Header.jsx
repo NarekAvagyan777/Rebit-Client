@@ -1,21 +1,46 @@
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "@/assets/image/logo/Logo_color.png";
-import ArrowRight from "@/assets/image/icons/arrow_right.svg";
-import header from "./header.module.scss";
+'use client'
+import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '@/assets/image/logo/Logo_color.png'
+import ArrowRight from '@/assets/image/icons/arrow_right.svg'
+import header from './header.module.scss'
+import { useEffect, useState } from 'react'
+
+const useScrollSticky = () => {
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    // Function to handle the scroll event
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      // You can adjust the threshold value (e.g., 100) to change when the class is added
+      setIsSticky(scrollY > 80)
+    }
+
+    // Check if window is defined before adding the scroll event listener
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll)
+
+      // Remove the scroll event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [])
+
+  return isSticky
+}
 
 function Header({ route }) {
-
   const toContacts = () => {
-    const contacts = document.getElementById("contactus");
-    const rect =
-      contacts.getBoundingClientRect().top +
-      window.pageYOffset
-    window.scrollTo({ top: rect, behavior: "smooth" });
-  };
-
+    const contacts = document.getElementById('contactus')
+    const rect = contacts.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({ top: rect, behavior: 'smooth' })
+  }
+  const isSticky = useScrollSticky()
+  const headerClasses = `${header.header} ${isSticky ? header.sticky : ''}`
   return (
-    <div className={header.header}>
+    <div className={headerClasses}>
       <div>
         <Link href="/">
           <Image src={Logo} height={38} alt="logo" />
@@ -27,7 +52,7 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/Work"
-                style={route === "/Work" ? { color: "#00DA49" } : {}}
+                style={route === '/Work' ? { color: '#00DA49' } : {}}
               >
                 Work
               </Link>
@@ -35,7 +60,7 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/Services"
-                style={route === "/Services" ? { color: "#00DA49" } : {}}
+                style={route === '/Services' ? { color: '#00DA49' } : {}}
               >
                 Services
               </Link>
@@ -43,7 +68,7 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/Startups"
-                style={route === "/Startups" ? { color: "#00DA49" } : {}}
+                style={route === '/Startups' ? { color: '#00DA49' } : {}}
               >
                 Startups
               </Link>
@@ -51,7 +76,7 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/aboutus"
-                style={route === "/aboutus" ? { color: "#00DA49" } : {}}
+                style={route === '/aboutus' ? { color: '#00DA49' } : {}}
               >
                 About Us
               </Link>
@@ -59,7 +84,7 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/blog"
-                style={route === "/blog" ? { color: "#00DA49" } : {}}
+                style={route === '/blog' ? { color: '#00DA49' } : {}}
               >
                 Blog
               </Link>
@@ -67,7 +92,7 @@ function Header({ route }) {
             <li className={header.navItem}>
               <Link
                 href="/academy"
-                style={route === "/academy" ? { color: "#00DA49" } : {}}
+                style={route === '/academy' ? { color: '#00DA49' } : {}}
               >
                 Academy
               </Link>
@@ -82,7 +107,7 @@ function Header({ route }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header
