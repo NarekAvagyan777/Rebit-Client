@@ -156,14 +156,14 @@ function ContactUs() {
             <div>
               <button className={styles.button} onClick={handleSubmit}>
                 Submit
-                <Image src={ArrowRight} />
+                <Image src={ArrowRight} alt="Arrow Right" />
               </button>
             </div>
           </div>
         ) : (
           <div className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}>
             <div className={styles.success}>
-              <Image src={success} />
+              <Image src={success} alt='success' />
                <p>Message sent!</p>
             </div>         
        </div>
@@ -173,19 +173,19 @@ function ContactUs() {
           className={`${styles.content_wrapper__element} ${styles.content_wrapper__contact}`}
         >
           <div>
-            <Image src={map} />
+            <Image src={map} alt='map' />
           </div>
           <div className={styles.content_wrapper__contact_block}>
             <div>
-              <Image src={mail} />
+              <Image src={mail} alt='mail' />
               <span>hello@rebit.ai</span>
             </div>
             <div>
-              <Image src={phone} />
+              <Image src={phone} alt='phone' />
               <span>+374 77 701105</span>
             </div>
             <div>
-              <Image src={location} />
+              <Image src={location} alt='location' />
               <span>6, Tumanyan str, Yerevan, Armenia, 0001</span>
             </div>
           </div>

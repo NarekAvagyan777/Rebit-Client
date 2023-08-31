@@ -58,12 +58,12 @@ export default function Slider() {
             </div>
 
             <div className={styles.companyLogo_wrapper}>
-              <Image src={epam} />
+              <Image src={epam} alt="epam" />
             </div>
           </div>
 
           <div className={styles.memberWrapper}>
-            <Image src={member} />
+            <Image src={member} alt="member" />
           </div>
         </div>
         <div className={styles.sliderElement}>
@@ -80,12 +80,12 @@ export default function Slider() {
             </div>
 
             <div className={styles.companyLogo_wrapper}>
-              <Image src={epam} />
+              <Image src={epam} alt="epam" />
             </div>
           </div>
 
           <div  className={styles.memberWrapper}>
-            <Image src={member} />
+            <Image src={member} alt="member" />
           </div>
         </div>
         <div className={styles.sliderElement}>
@@ -103,12 +103,12 @@ export default function Slider() {
             </div>
 
             <div className={styles.companyLogo_wrapper}>
-              <Image src={epam} />
+              <Image src={epam} alt="epam" />
             </div>
           </div>
 
           <div  className={styles.memberWrapper}>
-            <Image src={member} />
+            <Image src={member} alt="member" />
           </div>
         </div>
       </Carousel>

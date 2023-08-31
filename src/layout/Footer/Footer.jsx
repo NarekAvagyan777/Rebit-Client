@@ -71,15 +71,15 @@ export default function Footer() {
             </div>
             <div className={styles.content_wrapper__contact_block}>
               <div>
-                <Image src={mail} />
+                <Image src={mail} alt='mail' />
                 <span>hello@rebit.ai</span>
               </div>
               <div>
-                <Image src={phone} />
+                <Image src={phone} alt='phone' />
                 <span>+374 77 701105</span>
               </div>
               <div>
-                <Image src={location} />
+                <Image src={location} alt='location' />
                 <span>6, Tumanyan str, Yerevan, Armenia, 0001</span>
               </div>
             </div>
