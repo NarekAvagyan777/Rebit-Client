@@ -104,22 +104,32 @@ function Services() {
 
   useEffect(() => {
     const idHashMapping = {
-      research: 'researchh',
-      design: 'designn',
-      branding: 'brandingg',
-      software: 'softwaree',
-      scale: 'scalee',
-    }
+      research: "researches",
+      design: "designes",
+      branding: "brandinges",
+      software: "softwarees",
+      scale: "scalees"
+    };
 
     if (router.asPath.includes('#')) {
       const last = router.asPath.split('#')[1]
 
-      const elementId = idHashMapping[last]
+
+      const header = document.getElementById('header');
+      const elementId = idHashMapping[last];
+
       if (elementId) {
         const element = document.getElementById(elementId)
         if (element) {
-          const rect = element.getBoundingClientRect().top + window.pageYOffset
-          window.scrollTo({ top: rect, behavior: 'smooth' })
+          const rect =
+            element.getBoundingClientRect().top +
+            window.pageYOffset -
+            header.clientHeight;
+            // console.log('top', element.getBoundingClientRect().top)
+            // console.log('header', header.clientHeight);
+            // console.log('pageYOffset', window.pageYOffset);
+            // console.log('rect', rect)
+          window.scrollTo({ top: rect, behavior: "smooth" });
         }
       }
     }
@@ -193,7 +203,7 @@ function Services() {
           </div>
         </div>
         <div>
-          <div className={styles.contentContainer} id="researchh">
+          <div className={styles.contentContainer} id="researches">
             <h2>Research & Product Discovery</h2>
             <p>
               Through workshops and cutting-edge research methodologies we'll
@@ -226,7 +236,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer} id="designn">
+          <div className={styles.contentContainer} id="designes">
             <h2>Product Design & UX/UI</h2>
             <p>
               Intuitive design is a must-have for any software product. Our
@@ -256,7 +266,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer} id="brandingg">
+          <div className={styles.contentContainer} id="brandinges">
             <h2>Branding & Strategy</h2>
             <p>
               At the core of our approach, we maintain that brand and UX are
@@ -294,7 +304,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer} id="softwaree">
+          <div className={styles.contentContainer} id="softwarees">
             <h2>Software Engineering</h2>
             <p>
               Our team of experts ensure that your software product is
@@ -327,7 +337,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer} id="scalee">
+          <div className={styles.contentContainer} id="scalees">
             <h2>Scale & Maintenance</h2>
             <p>
               Intuitive design is a must-have for any software product. Our

@@ -40,7 +40,7 @@ function Header({ route }) {
   const isSticky = useScrollSticky()
   const headerClasses = `${header.header} ${isSticky ? header.sticky : ''}`
   return (
-    <div className={headerClasses}>
+    <div className={headerClasses} id='header'>
       <div>
         <Link href="/">
           <Image src={Logo} height={38} alt="logo" />
