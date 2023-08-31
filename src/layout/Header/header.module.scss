@@ -1,57 +1,89 @@
 .header {
-    height: 80px;
-    display: flex;
-    padding: 0px 40px;
-    // max-width: 1520px;
-    margin: 0 auto;
-    // padding: 0px 40px 40px 40px;
-    justify-content: space-between;
-    align-items: center;
+  height: 80px;
+  display: flex;
+  padding: 0px 40px;
+  // max-width: 1520px;
+  margin: 0 auto;
+  // padding: 0px 40px 40px 40px;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  // z-index: 1000;
 }
+
+.sticky {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #ffffff;
+  animation: fadeInDown 0.4s ease-in-out; /* Apply the animation */
+  transition: 0.4s;
+}
+
+.sticky.active {
+  top: 0; /* Bring the sticky header into view */
+  -webkit-animation: 500ms ease-in-out 0s normal fadeInDown;
+  animation: 500ms ease-in-out 0s normal fadeInDown;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-1px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .button {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    background-color: #00DA49;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 30px;
-    padding: 8px 12px 8px 20px;
-    border: none;
-    gap: 4px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: #00da49;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 8px 12px 8px 20px;
+  border: none;
+  gap: 4px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navList {
-    list-style: none;
-    display: flex;
-    padding: 16px 20px;
-  }
-  
-  .navItem {
-    margin: 0 20px;
-  }
-  
-  .navItem:last-child {
-    margin-right: 40px;
-  }
-   
-  .navItem a {
-    color: #004538;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-  }
+  list-style: none;
+  display: flex;
+  padding: 16px 20px;
+}
 
-  .navItem a:hover {
-    color: #00da49;
-  }
+.navItem {
+  margin: 0 20px;
+}
 
-  
+.navItem:last-child {
+  margin-right: 40px;
+}
+
+.navItem a {
+  color: #004538;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.navItem a:hover {
+  color: #00da49;
+}
