@@ -1,15 +1,108 @@
 // "use client";
-import { useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import styles from "@/pages/Services/Services.module.scss";
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import styles from '@/pages/Services/Services.module.scss'
+
+const ServiceItem = ({ item }) => {
+  return (
+    <div className={styles.service_item}>
+      <p>{item}</p>
+    </div>
+  )
+}
 
 function Services() {
+  const router = useRouter()
+  const [isSticky, setIsSticky] = useState(false)
 
-  const router = useRouter();
+  const research = [
+    'Discover',
+    'Kickoff Meeting',
+    'Stakeholder Interviews',
+    'Problem Framing',
+    'Market Analysis',
+    'User Interviews',
+    'User Personas',
+    'Affinity Mapping',
+    'Competitor Analysis',
+    'Benchmarking',
+    'Workshops',
+    'Functionality Prioritization',
+    'Roadmapping',
+  ]
+  const design = [
+    'UX/UI',
+    'User Experience Meeting',
+    'Design Systems',
+    'Product Design',
+    'User Testing',
+    'Wireframes',
+    'User Flows',
+    'Journey Mapping',
+    'Prototyping',
+    'UI Kit',
+    'UI Design',
+    'Mockups',
+    'Icons',
+    'Heuristic Evaluation',
+    'Usability Testing',
+    'User Interface',
+    'UX Design',
+    'Contextual Inquiry',
+  ]
+  const branding = [
+    'Branding Research',
+    'Naming',
+    'Brand Identity',
+    'Logo',
+    'Identity Guidelines',
+    'Rebranding',
+    'Marketing Materials',
+    'SEO',
+    'Content Writing',
+    'Verbal Identity',
+    'Visual Identity',
+    'Social Media',
+    'Brand Illustrations',
+    'Pitch Deck',
+  ]
+  const software = [
+    'Frontend Engineering',
+    'Backend Engineering',
+    'Mobile App',
+    'React',
+    'Python',
+    'Web Development',
+    'iOS Development',
+    'Swift',
+    'Android Development',
+    'Kotlin',
+    'Vue',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Node.js',
+    'React Native',
+    'PHP',
+  ]
+  const scale = [
+    'Discover',
+    'Kickoff Meeting',
+    'Stakeholder Interviews',
+    'Problem Framing',
+    'Market Analysis',
+    'User Interviews',
+    'User Personas',
+    'Affinity Mapping',
+    'Competitor Analysis',
+    'Benchmarking',
+    'Workshops',
+    'Functionality Prioritization',
+    'Roadmapping',
+  ]
 
   useEffect(() => {
-
     const idHashMapping = {
       research: "researches",
       design: "designes",
@@ -18,13 +111,15 @@ function Services() {
       scale: "scalees"
     };
 
-    if (router.asPath.includes("#")) {
-      const last = router.asPath.split("#")[1];
+    if (router.asPath.includes('#')) {
+      const last = router.asPath.split('#')[1]
+
 
       const header = document.getElementById('header');
       const elementId = idHashMapping[last];
+
       if (elementId) {
-        const element = document.getElementById(elementId);
+        const element = document.getElementById(elementId)
         if (element) {
           const rect =
             element.getBoundingClientRect().top +
@@ -38,27 +133,72 @@ function Services() {
         }
       }
     }
-  },)
+  })
 
   console.log('router', router)
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const titleContainer = document.querySelector(`.${styles.titleContainer}`)
+  //     const container = document.querySelector(`.${styles.container}`)
+
+  //     const rect = container.getBoundingClientRect()
+  //     if (rect.top <= 0) {
+  //       setIsSticky(true)
+  //     } else {
+  //       setIsSticky(false)
+  //     }
+  //   }
+
+  //   window.addEventListener('scroll', handleScroll)
+
+  //   // Clean up the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
   return (
     <div className={styles.container}>
       <h1>We do what we do best.</h1>
       <div className={styles.innerContainer}>
-        <div className={styles.titleContainer}>
-          <div className={`${styles.linkitem} ${router.asPath === '/Services#research' ? styles.active : ''}`}>
+        <div
+          className={`${styles.titleContainer} ${
+            isSticky ? styles.sticky : ''
+          }`}
+        >
+          <div
+            className={`${styles.linkitem} ${
+              router.asPath === '/Services#research' ? styles.active : ''
+            }`}
+          >
             <Link href="#research">Research & Product Discovery</Link>
           </div>
-          <div className={`${styles.linkitem} ${router.asPath === '/Services#design' ? styles.active : ''}`}>
+          <div
+            className={`${styles.linkitem} ${
+              router.asPath === '/Services#design' ? styles.active : ''
+            }`}
+          >
             <Link href="#design">Product Design & UX/UI</Link>
           </div>
-          <div className={`${styles.linkitem} ${router.asPath === '/Services#branding' ? styles.active : ''}`}>
+          <div
+            className={`${styles.linkitem} ${
+              router.asPath === '/Services#branding' ? styles.active : ''
+            }`}
+          >
             <Link href="#branding">Branding & Strategy</Link>
           </div>
-          <div className={`${styles.linkitem} ${router.asPath === '/Services#software' ? styles.active : ''}`}>
+          <div
+            className={`${styles.linkitem} ${
+              router.asPath === '/Services#software' ? styles.active : ''
+            }`}
+          >
             <Link href="#software">Software Engineering</Link>
           </div>
-          <div className={`${styles.linkitem} ${router.asPath === '/Services#scale' ? styles.active : ''}`}>
+          <div
+            className={`${styles.linkitem} ${
+              router.asPath === '/Services#scale' ? styles.active : ''
+            }`}
+          >
             <Link href="#scale">Scale & Maintenance</Link>
           </div>
         </div>
@@ -89,6 +229,11 @@ function Services() {
                 </li>
               </ul>
             </div>
+            <div className={styles.service_item_container}>
+              {research.map((item, index) => (
+                <ServiceItem key={index} item={item} />
+              ))}
+            </div>
           </div>
 
           <div className={styles.contentContainer} id="designes">
@@ -113,6 +258,11 @@ function Services() {
                   Mobile and web <b>interface design</b>
                 </li>
               </ul>
+            </div>
+            <div className={styles.service_item_container}>
+              {design.map((item, index) => (
+                <ServiceItem key={index} item={item} />
+              ))}
             </div>
           </div>
 
@@ -147,6 +297,11 @@ function Services() {
                 </li>
               </ul>
             </div>
+            <div className={styles.service_item_container}>
+              {branding.map((item, index) => (
+                <ServiceItem key={index} item={item} />
+              ))}
+            </div>
           </div>
 
           <div className={styles.contentContainer} id="softwarees">
@@ -175,6 +330,11 @@ function Services() {
                 </li>
               </ul>
             </div>
+            <div className={styles.service_item_container}>
+              {software.map((item, index) => (
+                <ServiceItem key={index} item={item} />
+              ))}
+            </div>
           </div>
 
           <div className={styles.contentContainer} id="scalees">
@@ -200,11 +360,16 @@ function Services() {
                 </li>
               </ul>
             </div>
+            <div className={styles.service_item_container}>
+              {software.map((item, index) => (
+                <ServiceItem key={index} item={item} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Services;
+export default Services
