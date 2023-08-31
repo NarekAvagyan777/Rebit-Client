@@ -1,6 +1,5 @@
 .workMainCont {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
 }
 .title_container {
   display: flex;
@@ -16,4 +15,5 @@
 .works_container {
   display: flex;
   // width: 100%;
+  margin-top: 80px;
 }

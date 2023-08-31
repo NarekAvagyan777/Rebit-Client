@@ -1,6 +1,6 @@
 .container {
   margin: 120px auto;
-  max-width: 1520px;
+  // max-width: 1520px;
   padding: 0 40px;
 }
 
@@ -55,8 +55,8 @@
   font-weight: 500;
   line-height: 60px;
 }
-.itemCont .projectText  {
-  transition:  transform 0.7s, color 0.7s;
+.itemCont .projectText {
+  transition: transform 0.7s, color 0.7s;
 }
 .itemCont:hover .projectImage {
   transform: scale(1.25);
@@ -66,5 +66,3 @@
   color: #00da49;
   transform: translateY(-10px);
 }
-
-
