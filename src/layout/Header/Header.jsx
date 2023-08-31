@@ -43,7 +43,7 @@ function Header({ route }) {
     <div className={headerClasses}>
       <div>
         <Link href="/">
-          <Image src={Logo} height={38} />
+          <Image src={Logo} height={38} alt="logo" />
         </Link>
       </div>
       <div className={header.container}>
@@ -102,7 +102,7 @@ function Header({ route }) {
         <div>
           <button className={header.button} onClick={toContacts}>
             Let’s talk
-            <Image src={ArrowRight} />
+            <Image src={ArrowRight} alt="arrow right" />
           </button>
         </div>
       </div>

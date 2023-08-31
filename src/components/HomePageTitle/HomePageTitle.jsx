@@ -24,7 +24,7 @@ function HomePageTitle() {
       </div>
       <div className={styles.logo_container}>
         {logos.map((logo, index) => (
-          <Image key={index} src={logo} height={36} />
+          <Image key={index} src={logo} height={36} alt='homepage title' />
         ))}
       </div>
     </div>

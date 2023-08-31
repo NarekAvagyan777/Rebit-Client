@@ -1,32 +1,63 @@
-"use client";
-import Link from "next/link";
-import styles from "@/pages/Services/Services.module.scss";
+// "use client";
 import { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import styles from "@/pages/Services/Services.module.scss";
 
 function Services() {
+
+  const router = useRouter();
+
+  useEffect(() => {
+
+    const idHashMapping = {
+      research: "researchh",
+      design: "designn",
+      branding: "brandingg",
+      software: "softwaree",
+      scale: "scalee"
+    };
+
+    if (router.asPath.includes("#")) {
+      const last = router.asPath.split("#")[1];
+
+      const elementId = idHashMapping[last];
+      if (elementId) {
+        const element = document.getElementById(elementId);
+        if (element) {
+          const rect =
+            element.getBoundingClientRect().top +
+            window.pageYOffset;
+          window.scrollTo({ top: rect, behavior: "smooth" });
+        }
+      }
+    }
+  },)
+
+  console.log('router', router)
   return (
     <div className={styles.container}>
       <h1>We do what we do best.</h1>
       <div className={styles.innerContainer}>
         <div className={styles.titleContainer}>
-          <div className={styles.linkitem}>
+          <div className={`${styles.linkitem} ${router.asPath === '/Services#research' ? styles.active : ''}`}>
             <Link href="#research">Research & Product Discovery</Link>
           </div>
-          <div className={styles.linkitem}>
+          <div className={`${styles.linkitem} ${router.asPath === '/Services#design' ? styles.active : ''}`}>
             <Link href="#design">Product Design & UX/UI</Link>
           </div>
-          <div className={styles.linkitem}>
+          <div className={`${styles.linkitem} ${router.asPath === '/Services#branding' ? styles.active : ''}`}>
             <Link href="#branding">Branding & Strategy</Link>
           </div>
-          <div className={styles.linkitem}>
+          <div className={`${styles.linkitem} ${router.asPath === '/Services#software' ? styles.active : ''}`}>
             <Link href="#software">Software Engineering</Link>
           </div>
-          <div className={styles.linkitem}>
+          <div className={`${styles.linkitem} ${router.asPath === '/Services#scale' ? styles.active : ''}`}>
             <Link href="#scale">Scale & Maintenance</Link>
           </div>
         </div>
         <div>
-          <div className={styles.contentContainer}>
+          <div className={styles.contentContainer} id="researchh">
             <h2>Research & Product Discovery</h2>
             <p>
               Through workshops and cutting-edge research methodologies we'll
@@ -54,7 +85,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer}>
+          <div className={styles.contentContainer} id="designn">
             <h2>Product Design & UX/UI</h2>
             <p>
               Intuitive design is a must-have for any software product. Our
@@ -79,7 +110,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer}>
+          <div className={styles.contentContainer} id="brandingg">
             <h2>Branding & Strategy</h2>
             <p>
               At the core of our approach, we maintain that brand and UX are
@@ -112,7 +143,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer}>
+          <div className={styles.contentContainer} id="softwaree">
             <h2>Software Engineering</h2>
             <p>
               Our team of experts ensure that your software product is
@@ -140,7 +171,7 @@ function Services() {
             </div>
           </div>
 
-          <div className={styles.contentContainer}>
+          <div className={styles.contentContainer} id="scalee">
             <h2>Scale & Maintenance</h2>
             <p>
               Intuitive design is a must-have for any software product. Our
