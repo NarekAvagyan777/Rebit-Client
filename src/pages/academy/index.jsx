@@ -1,5 +1,13 @@
+import Head from "next/head";
+
 export default function index() {
   return (
-    <div>Academy</div>
+    <>
+      <Head>
+        <title>Academy</title>
+        <meta name="description" content="about our academy" />
+      </Head>
+      <div>Academy</div>
+    </>
   )
 }
