@@ -17,7 +17,7 @@ export default function Home() {
       <Services />
       <RuningLine/>
       <FeaturedProjects />
-      {/* <Slider /> */}
+      <Slider />
     </>
   )
 }

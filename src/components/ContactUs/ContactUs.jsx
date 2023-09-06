@@ -69,7 +69,6 @@ function ContactUs() {
         setErrors({ ...newErrors })
         setChecked(true)
 
-
         console.log('Form submitted with:', formData)
 
         // const res = await axios.post(
@@ -89,9 +88,9 @@ function ContactUs() {
         })
         setSended(true)
         setTimeout(() => {
-          setSended(false);
-          setIsLoading(false); // Set loading state to false after 5 seconds
-        }, 5000);
+          setSended(false)
+          setIsLoading(false) // Set loading state to false after 5 seconds
+        }, 5000)
       } else {
         newErrors.general = 'Please fill in all required fields'
         setErrors({ ...newErrors })
@@ -103,7 +102,7 @@ function ContactUs() {
   }
 
   return (
-    <div className={styles.container} id='contactus'>
+    <div className={styles.container} id="contactus">
       <h2 className={styles.title}>Let’s collaborate</h2>
 
       <div className={styles.content_wrapper}>
@@ -111,7 +110,7 @@ function ContactUs() {
           <div
             className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}
           >
-            <div>
+            <div style={{ display: 'flex', width: '100%' }}>
               <input
                 type="text"
                 // style={{
@@ -129,7 +128,7 @@ function ContactUs() {
                 <p className={styles.error_text}>{errors.name}</p>
               ) : null}
             </div>
-            <div>
+            <div style={{ display: 'flex', width: '100%' }}>
               <input
                 type="email"
                 placeholder="Email"
@@ -144,7 +143,7 @@ function ContactUs() {
                 <p className={styles.error_text}>{errors.email}</p>
               ) : null}
             </div>
-            <div>
+            <div style={{ display: 'flex', width: '100%' }}>
               <textarea
                 type="message"
                 name="message"
@@ -161,31 +160,33 @@ function ContactUs() {
             </div>
           </div>
         ) : (
-          <div className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}>
+          <div
+            className={`${styles.content_wrapper__element} ${styles.content_wrapper__form}`}
+          >
             <div className={styles.success}>
-              <Image src={success} alt='success' />
-               <p>Message sent!</p>
-            </div>         
-       </div>
+              <Image src={success} alt="success" />
+              <p>Message sent!</p>
+            </div>
+          </div>
         )}
 
         <div
           className={`${styles.content_wrapper__element} ${styles.content_wrapper__contact}`}
         >
           <div>
-            <Image src={map} alt='map' />
+            <Image src={map} alt="map" />
           </div>
           <div className={styles.content_wrapper__contact_block}>
             <div>
-              <Image src={mail} alt='mail' />
+              <Image src={mail} alt="mail" />
               <span>hello@rebit.ai</span>
             </div>
             <div>
-              <Image src={phone} alt='phone' />
+              <Image src={phone} alt="phone" />
               <span>+374 77 701105</span>
             </div>
             <div>
-              <Image src={location} alt='location' />
+              <Image src={location} alt="location" />
               <span>6, Tumanyan str, Yerevan, Armenia, 0001</span>
             </div>
           </div>

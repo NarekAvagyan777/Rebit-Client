@@ -16,9 +16,7 @@ export default function Footer() {
       <ContactUs />
       <div className={styles.container}>
         <div className={styles.content_wrapper}>
-          <div
-            className={`${styles.content_wrapper__element} ${styles.text_part}`}
-          >
+          <div className={`${styles.content_wrapper__element} ${styles.text_part}`}>
             <p>
               The text and graphic content of the website belongs to Rebit.ai
               and cannot be used by other resources without our permission and
@@ -27,9 +25,7 @@ export default function Footer() {
             <p>© Rebit.ai 2023</p>
           </div>
 
-          <div
-            className={`${styles.content_wrapper__element} ${styles.links_block}`}
-          >
+          <div className={`${styles.content_wrapper__element} ${styles.links_block}`}>
             <p>
               <a href="">Work</a>
             </p>
