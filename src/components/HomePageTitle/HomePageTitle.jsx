@@ -6,7 +6,7 @@ import Epam from '@/assets/image/logo/epam.png'
 import Post from '@/assets/image/logo/HayPost.png'
 import Cola from '@/assets/image/logo/coca-cola.png'
 
-const logos = [Epam, Cola, Post,Epam, Cola, Post]
+const logos = [Epam, Cola, Post, Epam, Cola, Post]
 
 function HomePageTitle() {
   return (
@@ -24,7 +24,7 @@ function HomePageTitle() {
       </div>
       <div className={styles.logo_container}>
         {logos.map((logo, index) => (
-          <Image key={index} src={logo} height={36} alt='homepage title' />
+          <Image key={index} src={logo} height={36} alt="homepage title" />
         ))}
       </div>
     </div>

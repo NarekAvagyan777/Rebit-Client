@@ -14,6 +14,6 @@ export default function App({ Component, pageProps }) {
     <>
       <Header route={router?.route} />
       <Component {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
     </>)
 }

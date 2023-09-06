@@ -66,3 +66,12 @@
   color: #00da49;
   transform: translateY(-10px);
 }
+
+@media screen and (max-width: 1024px){
+  .content_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
