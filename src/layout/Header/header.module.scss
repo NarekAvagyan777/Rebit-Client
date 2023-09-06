@@ -2,7 +2,7 @@
   height: 80px;
   display: flex;
   padding: 0px 40px;
-  margin: 0 auto;
+  // margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -16,7 +16,6 @@
   margin: 0 auto;
   position: fixed;
   top: 0;
-
   width: 100%;
   z-index: 999;
   background: #ffffff;
@@ -28,6 +27,10 @@
   top: 0; /* Bring the sticky header into view */
   -webkit-animation: 500ms ease-in-out 0s normal fadeInDown;
   animation: 500ms ease-in-out 0s normal fadeInDown;
+}
+
+.icon_menu {
+  display: none;
 }
 
 @keyframes fadeInDown {
@@ -85,4 +88,82 @@
 
 .navItem a:hover {
   color: #00da49;
+}
+.icon_menu {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  padding: 2px 0;
+}
+.resp_nav {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .icon_menu {
+    display: flex;
+  }
+  .navList {
+    display: none;
+  }
+  .button {
+    display: none;
+  }
+  .header {
+    // width: 100%;
+  }
+  
+  .resp_nav {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 80px;
+    z-index: 999;
+    
+  }
+  .dropDown {
+    background-color: #ffffff;
+    width: 100%;
+    
+  }
+  .opened {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .icon_menu {
+    display: flex;
+  }
+  .navList {
+    display: none;
+  }
+  .button {
+    display: none;
+  }
+  .header {
+    // width: 100%;
+  }
+  .resp_nav {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 80px;
+    z-index: 999;
+    
+  }
+  .dropDown {
+    background-color: #ffffff;
+    width: 100%;
+    
+  }
+  .opened {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
 }
