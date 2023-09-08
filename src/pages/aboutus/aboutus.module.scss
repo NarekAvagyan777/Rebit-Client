@@ -133,3 +133,47 @@
     flex: 1; /* Each child element takes an equal share of the available space */
   }
 }
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.changing_text {
+  font-size: 36px;
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.word {
+  display: inline-block;
+  animation: slideFromBottom 2s ease-in-out infinite;
+}
+.image {
+  display: inline-block;
+  animation: slideFromBottom 2s ease-in-out infinite;
+}
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  34% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  67% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px);
+    opacity: 1;
+  }
+}
+
+.colorChange {
+  color: #00da49 !important;
+}

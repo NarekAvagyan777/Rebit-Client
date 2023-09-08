@@ -1,7 +1,39 @@
+'use client'
 import Head from 'next/head'
 import styles from '@/pages/aboutus/aboutus.module.scss'
+import { useEffect, useState } from 'react'
+import Img1 from '@/assets/image/img/bro.png'
+import Img2 from '@/assets/image/img/bro1.png'
+import Img3 from '@/assets/image/img/bro2.png'
+import Img4 from '@/assets/image/img/bro3.png'
+import Img5 from '@/assets/image/img/bro4.png'
+import Image from 'next/image'
 
 export default function index() {
+  const words = [
+    'Team players',
+    'Creators',
+    'Strategists',
+    'Designers',
+    'Engineers',
+    'Startupers',
+  ]
+  const images = [Img1, Img2, Img3, Img4, Img5]
+  const [currentWordIndex, setCurrentWordIndex] = useState(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length)
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+      console.log('====================================')
+      console.log(currentWordIndex)
+      console.log('====================================')
+    }, 2000)
+
+    return () => clearInterval(timer)
+  }, [currentWordIndex, currentImageIndex, words.length, images.length])
+
   return (
     <>
       <Head>
@@ -50,8 +82,24 @@ export default function index() {
           <div className={styles.about}>
             <div className={styles.about_container}>
               <div>
+                <p className={styles.text}>We are</p>
+                <p className={styles.changing_text}>
+                  <span className={styles.word}>{words[currentWordIndex]}</span>
+                </p>
+              </div>
+              <div className={styles.change_image}>
+                <Image
+                  src={images[currentImageIndex]}
+                  alt="Image"
+                  // width={620}
+                  // height={420}
+                />
+              </div>
+            </div>
+            {/* <div className={styles.about_container}>
+              <div>
                 <p>We are</p>
-                <p>
+                <p class="changing-text">
                   Team play<span>ers</span>
                 </p>
               </div>
@@ -60,7 +108,7 @@ export default function index() {
             <div className={styles.about_container}>
               <div>
                 <p>We are</p>
-                <p>
+                <p className="changing-text">
                   Creat<span>ors</span>
                 </p>
               </div>
@@ -69,7 +117,7 @@ export default function index() {
             <div className={styles.about_container}>
               <div>
                 <p>We are</p>
-                <p>
+                <p className="changing-text">
                   Strateg<span>ists</span>
                 </p>
               </div>
@@ -78,7 +126,7 @@ export default function index() {
             <div className={styles.about_container}>
               <div>
                 <p>We are</p>
-                <p>
+                <p className="changing-text">
                   Design<span>ers</span>
                 </p>
               </div>
@@ -87,7 +135,7 @@ export default function index() {
             <div className={styles.about_container}>
               <div>
                 <p>We are</p>
-                <p>
+                <p className="changing-text">
                   Design<span>ers</span>
                 </p>
               </div>
@@ -96,12 +144,12 @@ export default function index() {
             <div className={styles.about_container}>
               <div>
                 <p>We are</p>
-                <p>
+                <p className="changing-text">
                   Startup<span>ers</span>
                 </p>
               </div>
               <div>1</div>
-            </div>
+            </div> */}
 
             <div className={styles.aboutus}>
               <div>
@@ -111,7 +159,7 @@ export default function index() {
                 <div>
                   <p>2</p>
                 </div>
-                <div id='vision'>
+                <div id="vision">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -128,7 +176,7 @@ export default function index() {
                 <p>Our mission</p>
               </div>
               <div className={styles.mission_container}>
-                <div id='mission'>
+                <div id="mission">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
