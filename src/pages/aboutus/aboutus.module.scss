@@ -177,3 +177,8 @@
 .colorChange {
   color: #00da49 !important;
 }
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

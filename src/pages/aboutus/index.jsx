@@ -26,9 +26,6 @@ export default function index() {
     const timer = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length)
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-      console.log('====================================')
-      console.log(currentWordIndex)
-      console.log('====================================')
     }, 2000)
 
     return () => clearInterval(timer)
@@ -81,75 +78,16 @@ export default function index() {
           </div>
           <div className={styles.about}>
             <div className={styles.about_container}>
-              <div>
+              <div className={styles.titleWrapper}>
                 <p className={styles.text}>We are</p>
                 <p className={styles.changing_text}>
                   <span className={styles.word}>{words[currentWordIndex]}</span>
                 </p>
               </div>
               <div className={styles.change_image}>
-                <Image
-                  src={images[currentImageIndex]}
-                  alt="Image"
-                  // width={620}
-                  // height={420}
-                />
+                <Image src={images[currentImageIndex]} alt="Image" />
               </div>
             </div>
-            {/* <div className={styles.about_container}>
-              <div>
-                <p>We are</p>
-                <p class="changing-text">
-                  Team play<span>ers</span>
-                </p>
-              </div>
-              <div>1</div>
-            </div>
-            <div className={styles.about_container}>
-              <div>
-                <p>We are</p>
-                <p className="changing-text">
-                  Creat<span>ors</span>
-                </p>
-              </div>
-              <div>1</div>
-            </div>
-            <div className={styles.about_container}>
-              <div>
-                <p>We are</p>
-                <p className="changing-text">
-                  Strateg<span>ists</span>
-                </p>
-              </div>
-              <div>1</div>
-            </div>
-            <div className={styles.about_container}>
-              <div>
-                <p>We are</p>
-                <p className="changing-text">
-                  Design<span>ers</span>
-                </p>
-              </div>
-              <div>1</div>
-            </div>
-            <div className={styles.about_container}>
-              <div>
-                <p>We are</p>
-                <p className="changing-text">
-                  Design<span>ers</span>
-                </p>
-              </div>
-              <div>1</div>
-            </div>
-            <div className={styles.about_container}>
-              <div>
-                <p>We are</p>
-                <p className="changing-text">
-                  Startup<span>ers</span>
-                </p>
-              </div>
-              <div>1</div>
-            </div> */}
 
             <div className={styles.aboutus}>
               <div>
