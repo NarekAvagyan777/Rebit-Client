@@ -8,6 +8,9 @@ import Img3 from '@/assets/image/img/bro2.png'
 import Img4 from '@/assets/image/img/bro3.png'
 import Img5 from '@/assets/image/img/bro4.png'
 import Image from 'next/image'
+import Groupfoto from '@/assets/image/img/groupfoto.png'
+import Visionfoto from '@/assets/image/img/vision.png'
+import Missionfoto from '@/assets/image/img/mission.png'
 
 export default function index() {
   const words = [
@@ -46,8 +49,8 @@ export default function index() {
         </div>
         <div>
           <div className={styles.content}>
-            <div>
-              <p>sasa</p>
+            <div className={styles.fotoWrapper}>
+              <Image src={Groupfoto} alt="Group foto" />
             </div>
             <div>
               <div className={styles.description}>
@@ -94,8 +97,8 @@ export default function index() {
                 <p>Our vision</p>
               </div>
               <div className={styles.mission_container}>
-                <div>
-                  <p>2</p>
+                <div className={styles.fotoWrapper}>
+                  <Image src={Visionfoto} alt="Vision" />
                 </div>
                 <div id="vision">
                   <p>
@@ -125,8 +128,8 @@ export default function index() {
                   </p>
                 </div>
 
-                <div>
-                  <p>2</p>
+                <div className={styles.fotoWrapper}>
+                  <Image src={Missionfoto} alt="Mission" />
                 </div>
               </div>
             </div>
