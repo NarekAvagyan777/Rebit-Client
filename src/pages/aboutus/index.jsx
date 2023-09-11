@@ -12,6 +12,18 @@ import Groupfoto from '@/assets/image/img/groupfoto.png'
 import Visionfoto from '@/assets/image/img/vision.png'
 import Missionfoto from '@/assets/image/img/mission.png'
 
+const getLastLettersStyle = (word) => {
+  if (word === 'Strategists') {
+    const lastLetters = word.slice(-4)
+  } else {
+    const lastLetters = word.slice(-3) // Get the last 3 letters of the word
+  }
+  return {
+    color: '#00da49', // Set your desired color here
+    fontWeight: 'bold', // You can apply other styles as well
+  }
+}
+
 export default function index() {
   const words = [
     'Team players',
@@ -84,7 +96,14 @@ export default function index() {
               <div className={styles.titleWrapper}>
                 <p className={styles.text}>We are</p>
                 <p className={styles.changing_text}>
-                  <span className={styles.word}>{words[currentWordIndex]}</span>
+                  <span className={styles.word}>
+                    {words[currentWordIndex] !== 'Strategists' ?  words[currentWordIndex].slice(0, -3) : words[currentWordIndex].slice(0, -4)}
+                    {''}
+
+                    <span style={getLastLettersStyle(words[currentWordIndex])}>
+                      { words[currentWordIndex] !== 'Strategists' ? words[currentWordIndex].slice(-3) :words[currentWordIndex].slice(-4) }
+                    </span>
+                  </span>
                 </p>
               </div>
               <div className={styles.change_image}>
