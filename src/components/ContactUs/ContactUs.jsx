@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import styles from './contactus.module.scss'
 import ArrowRight from '@/assets/image/icons/arrow_right.svg'
-import map from '@/assets/image/img/map.png'
+import map from '@/assets/image/img/map.svg'
 import mail from '@/assets/image/icons/mail.svg'
 import phone from '@/assets/image/icons/phone_in_talk.svg'
 import location from '@/assets/image/icons/location.svg'
@@ -151,7 +151,11 @@ function ContactUs() {
                 placeholder="Project Details (Optional)"
                 value={formData.message}
                 onChange={(e) => handleInputChange(e)}
-                style={{ caretColor: '#00da49' }}
+                style={{
+                  caretColor: '#00da49',
+                  // lineHeight: '24px', // Adjust the line height to vertically center the placeholder
+                  paddingTop: '15px',
+                }}
               />
             </div>
             <div>

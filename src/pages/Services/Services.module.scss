@@ -1,6 +1,5 @@
 .container {
   padding: 120px 40px;
-  padding: 0 40px;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -19,25 +18,22 @@
   display: flex;
   gap: 120px;
   padding: 0;
-  // justify-content: space-between;
-  // align-items: center;
-  // flex-direction: column;
+ 
 }
 
 .titleContainer {
-  width: 70%;
+  width: 100%;
   position: sticky;
   top: 80px;
   height: max-content;
-  background-color: white; /* Adjust as needed */
+  background-color: #fff; 
   z-index: 100;
 
   div {
     display: flex;
-    margin: 8px 0;
+    margin: 0 0 16px 0;
     padding: 12px 0px;
     align-items: flex-start;
-    // align-self: stretch;
     border-bottom: 1px solid #dddfe1;
     flex-wrap: nowrap;
 
@@ -67,7 +63,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 60px; /* 150% */
-    // margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   p {
@@ -76,6 +72,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: 36px; /* 180% */
+    // margin-bottom: 20px;
+  }
+  p:nth-child(0) {
     margin-bottom: 20px;
   }
 
@@ -90,7 +89,9 @@
     margin-left: 22px;
   }
 }
-
+.contentContainer > p {
+  margin-bottom: 20px;
+}
 .contentContainer:not(:first-child) {
   margin-top: 80px;
 }

@@ -59,10 +59,12 @@
       textarea {
         outline: none;
         width: 100%;
-        padding: 17px 8px;
+        height: 60px;
+
+        padding: 0px 8px 0px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // flex-direction: column;
+        // justify-content: center;
         border: none;
         border-bottom: 1px solid #c3c7ca;
 
@@ -79,6 +81,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
+        margin-top: 24px;
       }
     }
   }

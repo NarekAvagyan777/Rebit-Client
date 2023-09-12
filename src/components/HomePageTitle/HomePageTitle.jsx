@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '@/components/HomePageTitle/HomePageTitle.module.scss'
-import TitleImg from '@/assets/image/img/title_image.png'
+import TitleImg from '@/assets/image/img/title_image.svg'
 import Image from 'next/image'
 import Epam from '@/assets/image/logo/epam.png'
 import Post from '@/assets/image/logo/HayPost.png'
