@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
               <div className={styles.content_wrapper__contact_block}>
                 <div>
-                  <Image src={mail} alt="mail" />
+                  <Image src={mail} alt="mail"  />
                   <span>hello@rebit.ai</span>
                 </div>
                 <div>

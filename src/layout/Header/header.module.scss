@@ -1,8 +1,9 @@
 .header {
   height: 80px;
   display: flex;
+  max-width: 1440px;
   padding: 0px 40px;
-  // margin: 0 auto;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -12,10 +13,15 @@
 }
 
 .sticky {
-  // max-width: 1440px;
+  display: flex;
+  max-width: 1440px;
   margin: 0 auto;
   position: fixed;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 999;
   background: #ffffff;
@@ -115,19 +121,17 @@
   .header {
     // width: 100%;
   }
-  
+
   .resp_nav {
     position: absolute;
     left: 10px;
     right: 10px;
     top: 80px;
     z-index: 999;
-    
   }
   .dropDown {
     background-color: #ffffff;
     width: 100%;
-    
   }
   .opened {
     display: block;
@@ -153,12 +157,10 @@
     right: 10px;
     top: 80px;
     z-index: 999;
-    
   }
   .dropDown {
     background-color: #ffffff;
     width: 100%;
-    
   }
   .opened {
     display: block;

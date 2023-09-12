@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   margin-bottom: 120px;
-  // max-width: 1520px;
+  max-width: 1440px;
   padding: 0 40px;
 }
 
@@ -93,9 +93,10 @@
 
       span {
         color: #1e2322;
-        font-size: 14px;
+        font-size: 20px;
+        font-style: normal;
         font-weight: 500;
-        line-height: 24px;
+        line-height: 36px; /* 180% */
       }
     }
 
@@ -129,6 +130,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  caret-color: #00da49;
 }
 .error_req {
   border-bottom: 1px solid #fe0404 !important;
