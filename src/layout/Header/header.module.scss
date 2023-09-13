@@ -37,6 +37,16 @@
 
 .icon_menu {
   display: none;
+  img {
+    transition: 0.4s;
+  }
+}
+
+.rotated_menu {
+  img {
+    transition: 0.4s;
+    transform: rotate(90deg);
+  }
 }
 
 @keyframes fadeInDown {
@@ -51,8 +61,9 @@
 }
 
 .button {
-  display: flex;
+  // width: 120.17px;
   cursor: pointer;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #00da49;
@@ -62,6 +73,16 @@
   padding: 8px 12px 8px 20px;
   border: none;
   gap: 4px;
+  
+  img {
+    transition: 0.4s;
+  }
+}
+
+.button:hover {
+  img {
+    transform: translateX(10px);
+  }
 }
 
 .container {

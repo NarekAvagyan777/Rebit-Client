@@ -89,6 +89,12 @@
   .content_wrapper {
     display: flex;
     flex-direction: column-reverse;
+
+    &__container {
+      // display: none;
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
   .text_part {
     // width: 768px;

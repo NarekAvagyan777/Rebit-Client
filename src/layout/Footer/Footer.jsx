@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
             <p>© Rebit.ai 2023</p>
           </div>
-          <div style={{ display: 'flex', width: '100%',  }}>
+          <div style={{ display: 'flex', width: '100%' }} className={styles.content_wrapper__container}>
             <div
               className={`${styles.content_wrapper__element} ${styles.links_block}`}
             >
