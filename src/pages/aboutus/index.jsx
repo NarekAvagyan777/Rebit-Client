@@ -2,15 +2,16 @@
 import Head from 'next/head'
 import styles from '@/pages/aboutus/aboutus.module.scss'
 import { useEffect, useState } from 'react'
-import Img1 from '@/assets/image/img/bro.png'
-import Img2 from '@/assets/image/img/bro1.png'
-import Img3 from '@/assets/image/img/bro2.png'
-import Img4 from '@/assets/image/img/bro3.png'
-import Img5 from '@/assets/image/img/bro4.png'
+import Img1 from '@/assets/image/img/bro.svg'
+import Img2 from '@/assets/image/img/bro1.svg'
+import Img3 from '@/assets/image/img/bro2.svg'
+import Img4 from '@/assets/image/img/bro3.svg'
+import Img5 from '@/assets/image/img/bro4.svg'
+import Img6 from '@/assets/image/img/bro6.svg'
 import Image from 'next/image'
-import Groupfoto from '@/assets/image/img/groupfoto.png'
-import Visionfoto from '@/assets/image/img/vision.png'
-import Missionfoto from '@/assets/image/img/mission.png'
+import Groupfoto from '@/assets/image/img/groupfoto.svg'
+import Visionfoto from '@/assets/image/img/vision.svg'
+import Missionfoto from '@/assets/image/img/mission.svg'
 
 const getLastLettersStyle = (word) => {
   if (word === 'Strategists') {
@@ -33,7 +34,7 @@ export default function index() {
     'Engineers',
     'Startupers',
   ]
-  const images = [Img1, Img2, Img3, Img4, Img5]
+  const images = [Img1, Img2, Img3, Img4, Img5, Img6]
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -97,11 +98,15 @@ export default function index() {
                 <p className={styles.text}>We are</p>
                 <p className={styles.changing_text}>
                   <span className={styles.word}>
-                    {words[currentWordIndex] !== 'Strategists' ?  words[currentWordIndex].slice(0, -3) : words[currentWordIndex].slice(0, -4)}
+                    {words[currentWordIndex] !== 'Strategists'
+                      ? words[currentWordIndex].slice(0, -3)
+                      : words[currentWordIndex].slice(0, -4)}
                     {''}
 
                     <span style={getLastLettersStyle(words[currentWordIndex])}>
-                      { words[currentWordIndex] !== 'Strategists' ? words[currentWordIndex].slice(-3) :words[currentWordIndex].slice(-4) }
+                      {words[currentWordIndex] !== 'Strategists'
+                        ? words[currentWordIndex].slice(-3)
+                        : words[currentWordIndex].slice(-4)}
                     </span>
                   </span>
                 </p>
