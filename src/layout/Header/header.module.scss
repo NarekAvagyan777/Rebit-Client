@@ -73,15 +73,15 @@
   padding: 8px 12px 8px 20px;
   border: none;
   gap: 4px;
-  
+
   img {
-    transition: 0.4s;
+    transition: 0.5s;
   }
 }
 
 .button:hover {
   img {
-    transform: translateX(10px);
+    transform: translateX(8px);
   }
 }
 
