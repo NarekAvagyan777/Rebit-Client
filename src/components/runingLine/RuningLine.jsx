@@ -2,6 +2,125 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import styles from "./RuningLine.module.scss";
+// custom css runingLine if neded we can use it started ready to work
+// const RuningLine = () => {
+//   const items = [
+//     "Branding",
+//     "Usability Testing",
+//     "Product Design",
+//     "Concept Validation",
+//     "A/B Testing",
+//     "Market Research",
+//     "Product Strategy",
+//     "SEO",
+//     "SMM",
+//     "UI Design",
+//     "Product Analysis",
+//     "Copywriting",
+//     "Heuristic Evaluation",
+//     "Wireframing",
+//     "Front-End",
+//     "iOS",
+//     "Back-End",
+//     "Android",
+//     "UX Writing",
+//     "CJM",
+//     "User Flows",
+//     "Empathy Mapping",
+//     "Prototyping",
+//     "JTBD",
+//     "SQL",
+//     "CRM",
+//     "Stress Testing",
+//     "Metrics Analytics",
+//   ];
+
+//   const separateItemsIntoRows = (items) => {
+//     const firstRow = [];
+//     const secondRow = [];
+//     const thirthRow = [];
+//     for (let i = 0; i < items.length; i += 3) {
+//       if (items[i] !== undefined) {
+//         firstRow.push(
+//           <div
+//             className={styles.textWrapper}
+//             key={i}
+//             style={
+//               i === items.length
+//                 ? {
+//                     marginRight: "0px",
+//                   }
+//                 : null
+//             }
+//           >
+//             <p className={styles.textWrapper__text}>{items[i]}</p>
+//           </div>
+//         );
+//       }
+//       if (items[i + 1] !== undefined) {
+//         secondRow.push(
+//           <div
+//             className={styles.textWrapper}
+//             key={i + 1}
+//             style={
+//               i === items.length
+//                 ? {
+//                     marginRight: "0px",
+//                   }
+//                 : null
+//             }
+//           >
+//             <p className={styles.textWrapper__text}>{items[i + 1]}</p>
+//           </div>
+//         );
+//       }
+//       if (items[i + 2] !== undefined) {
+//         thirthRow.push(
+//           <div
+//             className={styles.textWrapper}
+//             key={i + 2}
+//             style={
+//               i === items.length
+//                 ? {
+//                     marginRight: "0px",
+//                   }
+//                 : null
+//             }
+//           >
+//             <p className={styles.textWrapper__text}>{items[i + 2]}</p>
+//           </div>
+//         );
+//       }
+//     }
+//     return [firstRow, secondRow, thirthRow];
+//   };
+//   const rows = separateItemsIntoRows(items);
+//   return (
+//     <div className={styles.cont}>
+//       <div className={styles.rowCont}>
+//         <div className={styles.row}>{rows[0]}</div>
+//         <div className={styles.row}>{rows[0]}</div>
+//         <div className={styles.row}>{rows[0]}</div>
+//         <div className={styles.row}>{rows[0]}</div>
+//         <div className={styles.row}>{rows[0]}</div>
+//       </div>
+//       <div className={styles.rowCont}>
+//         <div className={styles.rowRight}>{rows[1]}</div>
+//         <div className={styles.rowRight}>{rows[1]}</div>
+//         <div className={styles.rowRight}>{rows[1]}</div>
+//         <div className={styles.rowRight}>{rows[1]}</div>
+//         <div className={styles.rowRight}>{rows[1]}</div>
+//       </div>
+//       <div className={styles.rowCont}>
+//         <div className={styles.row}>{rows[2]}</div>
+//         <div className={styles.row}>{rows[2]}</div>
+//         <div className={styles.row}>{rows[2]}</div>
+//         <div className={styles.row}>{rows[2]}</div>
+//         <div className={styles.row}>{rows[2]}</div>
+//       </div>
+//     </div>
+//   );
+// };
 const RuningLine = () => {
   const items = [
     "Branding",
@@ -101,7 +220,7 @@ const RuningLine = () => {
         direction={"left"}
         play={true}
         pauseOnHover={true}
-        // autoFill={true}
+        autoFill={true}
         delay={0}
         speed={100}
         loop={0}
@@ -112,7 +231,7 @@ const RuningLine = () => {
         direction={"right"}
         play={true}
         pauseOnHover={true}
-        // autoFill={true}
+        autoFill={true}
         delay={0}
         speed={100}
         loop={0}
@@ -123,7 +242,7 @@ const RuningLine = () => {
         direction={"left"}
         play={true}
         pauseOnHover={true}
-        // autoFill={true}
+        autoFill={true}
         delay={0}
         speed={100}
         loop={0}
