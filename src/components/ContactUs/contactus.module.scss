@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   margin-bottom: 120px;
-  // max-width: 1520px;
+  max-width: 1440px;
   padding: 0 40px;
 }
 
@@ -59,10 +59,12 @@
       textarea {
         outline: none;
         width: 100%;
-        padding: 17px 8px;
+        height: 60px;
+
+        padding: 0px 8px 0px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // flex-direction: column;
+        // justify-content: center;
         border: none;
         border-bottom: 1px solid #c3c7ca;
 
@@ -79,6 +81,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
+        margin-top: 24px;
       }
     }
   }
@@ -93,9 +96,10 @@
 
       span {
         color: #1e2322;
-        font-size: 14px;
+        font-size: 20px;
+        font-style: normal;
         font-weight: 500;
-        line-height: 24px;
+        line-height: 36px; /* 180% */
       }
     }
 
@@ -129,6 +133,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  caret-color: #00da49;
 }
 .error_req {
   border-bottom: 1px solid #fe0404 !important;

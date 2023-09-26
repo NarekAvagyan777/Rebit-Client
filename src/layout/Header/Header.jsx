@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 
 const useScrollSticky = () => {
   const [isSticky, setIsSticky] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     // Function to handle the scroll event
@@ -136,7 +137,7 @@ function Header({ route }) {
             <Image src={ArrowRight} alt="arrow right" />
           </button>
         </div>
-        <div className={header.icon_menu} onClick={handleOpen}>
+        <div className={`${header.icon_menu} ${menuOpen ? header.rotated_menu : ''}`} onClick={handleOpen}>
           <Image src={Menu} />
         </div>
         <nav className={`${header.resp_nav} ${menuOpen ? header.opened : ''}`}>

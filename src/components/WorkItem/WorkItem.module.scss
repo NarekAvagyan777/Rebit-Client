@@ -1,9 +1,11 @@
 .works_container {
   display: flex;
   justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
   flex-wrap: wrap;
   gap: 120px;
-  padding: 0 0 120px 0;
+  padding: 0 40px 120px 40px;
   h3 {
     color: #1e2322;
     font-size: 36px;
@@ -73,9 +75,13 @@
     transform: scale(1.25);
   }
 }
+.work_item .textCont{
+  margin-top: 16px;
+}
+
 .work_item .textCont h3,
 .work_item .textCont p {
-  transition:  transform 0.7s, color 0.7s;
+  transition: transform 0.7s, color 0.7s;
 }
 .work_item:hover .wotkImg {
   transform: scale(1.25);
@@ -83,9 +89,9 @@
 
 .work_item:hover .textCont h3 {
   color: #00da49;
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .work_item:hover .textCont p {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }

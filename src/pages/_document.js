@@ -5,8 +5,9 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name='keywords' content="web development, mobile development, software development, ui/ux, devops, ai models, consulting" />
+        <link rel="shortcut icon" href="/LogoMark_color.png" />
       </Head>
-      <body>
+    <body>
         <Main />
         <NextScript />
       </body>

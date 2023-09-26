@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import styles from './contactus.module.scss'
 import ArrowRight from '@/assets/image/icons/arrow_right.svg'
-import map from '@/assets/image/img/map.png'
+import map from '@/assets/image/img/map.svg'
 import mail from '@/assets/image/icons/mail.svg'
 import phone from '@/assets/image/icons/phone_in_talk.svg'
 import location from '@/assets/image/icons/location.svg'
@@ -119,6 +119,7 @@ function ContactUs() {
                 className={`${styles.form_control} ${
                   !checked && errors.name ? styles.error_req : ''
                 }`}
+                c
                 name="name"
                 placeholder="Name Surname"
                 value={formData.name}
@@ -150,6 +151,11 @@ function ContactUs() {
                 placeholder="Project Details (Optional)"
                 value={formData.message}
                 onChange={(e) => handleInputChange(e)}
+                style={{
+                  caretColor: '#00da49',
+                  // lineHeight: '24px', // Adjust the line height to vertically center the placeholder
+                  paddingTop: '15px',
+                }}
               />
             </div>
             <div>
@@ -178,16 +184,18 @@ function ContactUs() {
           </div>
           <div className={styles.content_wrapper__contact_block}>
             <div>
-              <Image src={mail} alt="mail" />
+              <Image src={mail} alt="mail" width={36} height={36} />
               <span>hello@rebit.ai</span>
             </div>
             <div>
-              <Image src={phone} alt="phone" />
+              <Image src={phone} alt="phone" width={36} height={36} />
               <span>+374 77 701105</span>
             </div>
             <div>
-              <Image src={location} alt="location" />
-              <span>6, Tumanyan str, Yerevan, Armenia, 0001</span>
+              <Image src={location} alt="location" width={36} height={36} />
+              <span>
+                6, Tumanyan str, Yerevan,<br></br> Armenia, 0001
+              </span>
             </div>
           </div>
         </div>
