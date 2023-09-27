@@ -29,8 +29,8 @@ export default function FeaturedProjects() {
       <h2 className={styles.title}>Featured projects</h2>
 
       <div className={styles.content_wrapper}>
-        {images.map((el) => (
-          <div className={styles.itemCont}>
+        {images.map((el, index) => (
+          <div key={index} className={styles.itemCont}>
             <div
               className={
                 el?.color === "green"

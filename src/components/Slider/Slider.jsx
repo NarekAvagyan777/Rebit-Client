@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Carousel } from "react-responsive-carousel";
-import styles from "./slider.module.scss";
-import epam from "@/assets/image/icons/epam.svg";
-import member from "@/assets/image/img/member.png";
+import Head from 'next/head'
+import Image from 'next/image'
+import { Carousel } from 'react-responsive-carousel'
+import styles from './slider.module.scss'
+import epam from '@/assets/image/icons/epam.svg'
+import member from '@/assets/image/img/member.png'
 
 export default function Slider() {
   return (
@@ -15,20 +15,21 @@ export default function Slider() {
         />
       </Head>
       <Carousel
+        showThumbs={false}
         infiniteLoop={true}
         emulateTouch={true}
         showArrows={false}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const defStyle = {
-            width: "40px",
-            height: "8px",
-            background: "#DDDFE1",
-            cursor: "pointer",
-            borderRadius: "4px",
-          };
+            width: '40px',
+            height: '8px',
+            background: '#DDDFE1',
+            cursor: 'pointer',
+            borderRadius: '4px',
+          }
           const style = isSelected
-            ? { ...defStyle, background: "#00DA49" }
-            : { ...defStyle };
+            ? { ...defStyle, background: '#00DA49' }
+            : { ...defStyle }
           return (
             <div
               style={style}
@@ -40,7 +41,7 @@ export default function Slider() {
               tabIndex={0}
               aria-label={`${label} ${index + 1}`}
             />
-          );
+          )
         }}
       >
         <div className={styles.sliderElement}>
@@ -84,7 +85,7 @@ export default function Slider() {
             </div>
           </div>
 
-          <div  className={styles.memberWrapper}>
+          <div className={styles.memberWrapper}>
             <Image src={member} alt="member" />
           </div>
         </div>
@@ -107,11 +108,11 @@ export default function Slider() {
             </div>
           </div>
 
-          <div  className={styles.memberWrapper}>
+          <div className={styles.memberWrapper}>
             <Image src={member} alt="member" />
           </div>
         </div>
       </Carousel>
     </div>
-  );
+  )
 }

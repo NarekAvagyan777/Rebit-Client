@@ -121,8 +121,8 @@
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   padding: 2px 0;
 }
 .resp_nav {
@@ -130,6 +130,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .header {
+    padding: 0 15px;
+  }
   .icon_menu {
     display: flex;
   }
@@ -139,53 +142,56 @@
   .button {
     display: none;
   }
-  .header {
-    // width: 100%;
-  }
+  // .header {
+  //   // width: 100%;
+  // }
 
-  .resp_nav {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 80px;
-    z-index: 999;
-  }
-  .dropDown {
-    background-color: #ffffff;
-    width: 100%;
-  }
-  .opened {
-    display: block;
-  }
+  // .resp_nav {
+  //   position: absolute;
+  //   left: 10px;
+  //   right: 10px;
+  //   top: 80px;
+  //   z-index: 999;
+  // }
+  // .dropDown {
+  //   background-color: #ffffff;
+  //   width: 100%;
+  // }
+  // .opened {
+  //   display: block;
+  // }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .icon_menu {
-    display: flex;
-  }
-  .navList {
-    display: none;
-  }
-  .button {
-    display: none;
-  }
   .header {
-    // width: 100%;
+    padding: 0 15px;
   }
-  .resp_nav {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 80px;
-    z-index: 999;
-  }
-  .dropDown {
-    background-color: #ffffff;
-    width: 100%;
-  }
-  .opened {
-    display: block;
-  }
+  // .icon_menu {
+  //   display: flex;
+  // }
+  // .navList {
+  //   display: none;
+  // }
+  // .button {
+  //   display: none;
+  // }
+  // .header {
+  //   // width: 100%;
+  // }
+  // .resp_nav {
+  //   position: absolute;
+  //   left: 10px;
+  //   right: 10px;
+  //   top: 80px;
+  //   z-index: 999;
+  // }
+  // .dropDown {
+  //   background-color: #ffffff;
+  //   width: 100%;
+  // }
+  // .opened {
+  //   display: block;
+  // }
 }
 
 @media only screen and (min-width: 1024px) {
