@@ -8,16 +8,19 @@ function Services() {
       text: "Through workshops and modern research methods we’ll test your idea,make sure it fits the market and show you how to turn it into reality.",
     },
     "Product Design & UX/UI": {
-      text: "Product Design & UX/UI",
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto.'
     },
     "Branding & Strategy": {
-      text: "Branding & Strategy",
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto, nostrum eos, iste voluptates ratione porro eum.'
+
     },
     "Software Engineering": {
-      text: "Software Engineering",
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores.'
+
     },
     "Scale & Maintenance": {
-      text: "Scale & Maintenance",
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto, nostrum eos, iste voluptates ratione porro eum.'
+
     },
   };
 
@@ -63,29 +66,9 @@ function Services() {
             </p>
             <p>Research & Product Discovery</p>
           </div>
-          <div
-            className={Styles.second}
-            onClick={() => {
-              hanlePageClick("Product Design & UX/UI");
-            }}
-            style={
-              currentPageKey === "Product Design & UX/UI"
-                ? {
-                    backgroundColor: "#00da49",
-                  }
-                : null
-            }
-          >
-            <p
-              style={
-                currentPageKey === "Product Design & UX/UI"
-                  ? {
-                      backgroundColor: "#ffffff",
-                      color: "#004538",
-                    }
-                  : null
-              }
-            >
+          <div className={Styles.second} onClick={() => {hanlePageClick("Product Design & UX/UI");}}style={
+              currentPageKey === "Product Design & UX/UI" ? {backgroundColor: "#00da49",}: null}>
+            <p style={currentPageKey === "Product Design & UX/UI"? {backgroundColor: "#ffffff",color: "#004538",}: null}>
               2
             </p>
             <p>Product Design & UX/UI</p>
@@ -173,7 +156,7 @@ function Services() {
           </div>
         </div>
         <div className={Styles.line}></div>
-        <ServicesText text={pages[currentPageKey]?.text} />
+        <ServicesText text={pages[currentPageKey]?.text} title={currentPageKey} />
       </div>
     </div>
   );

@@ -1,10 +1,42 @@
 .desc {
-    width: 50%;
-    p {
-      font-size: 36px;
+  width: 50%;
+  :first-child {
+    display: none;
+  }
+  p {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 60px;
+  }
+}
+
+.title {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .desc {
+    width: 100%;
+    margin: 24px 0 40px ;
+    
+    :first-child {
+      display: block;
+      display: block;
+      color: #004538;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 150% */
+      margin-bottom: 12px;
+    }
+    :last-child {
+      color: #1e2322;
+      font-size: 16px;
+      font-style: normal;
       font-weight: 400;
-      line-height: 60px;
+      line-height: 30px; /* 187.5% */
+      text-align: justify;
     }
   }
-
- 
+}
