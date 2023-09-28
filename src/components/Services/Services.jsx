@@ -1,36 +1,38 @@
-import React, { useState } from "react";
-import ServicesText from "./ServicesText/ServicesText";
-import Styles from'./Services.module.scss';
+import React, { useState } from 'react'
+import ServicesText from './ServicesText/ServicesText'
+import Styles from './Services.module.scss'
 
 function Services() {
   const pages = {
-    "Research & Product Discovery": {
-      text: "Through workshops and modern research methods we’ll test your idea,make sure it fits the market and show you how to turn it into reality.",
+    'Research & Product Discovery': {
+      text:
+        'Through workshops and modern research methods we’ll test your idea,make sure it fits the market and show you how to turn it into reality.',
     },
-    "Product Design & UX/UI": {
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto.'
+    'Product Design & UX/UI': {
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto.',
     },
-    "Branding & Strategy": {
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto, nostrum eos, iste voluptates ratione porro eum.'
-
+    'Branding & Strategy': {
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto, nostrum eos, iste voluptates ratione porro eum.',
     },
-    "Software Engineering": {
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores.'
-
+    'Software Engineering': {
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores.',
     },
-    "Scale & Maintenance": {
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto, nostrum eos, iste voluptates ratione porro eum.'
-
+    'Scale & Maintenance': {
+      text:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dignissimos? Eligendi explicabo rem cupiditate maxime magni quidem in praesentium dolores dolorem sapiente architecto, nostrum eos, iste voluptates ratione porro eum.',
     },
-  };
+  }
 
   const [currentPageKey, setCurrentPageKey] = useState(
-    "Research & Product Discovery"
-  );
+    'Research & Product Discovery',
+  )
 
   const hanlePageClick = (key) => {
-    setCurrentPageKey(key);
-  };
+    setCurrentPageKey(key)
+  }
 
   return (
     <div className={Styles.container}>
@@ -42,22 +44,22 @@ function Services() {
           <div
             className={Styles.first}
             onClick={() => {
-              hanlePageClick("Research & Product Discovery");
+              hanlePageClick('Research & Product Discovery')
             }}
             style={
-              currentPageKey === "Research & Product Discovery"
+              currentPageKey === 'Research & Product Discovery'
                 ? {
-                    backgroundColor: "#00da49",
+                    backgroundColor: '#00da49',
                   }
                 : null
             }
           >
             <p
               style={
-                currentPageKey === "Research & Product Discovery"
+                currentPageKey === 'Research & Product Discovery'
                   ? {
-                      backgroundColor: "#ffffff",
-                      color: "#004538",
+                      backgroundColor: '#ffffff',
+                      color: '#004538',
                     }
                   : null
               }
@@ -66,9 +68,24 @@ function Services() {
             </p>
             <p>Research & Product Discovery</p>
           </div>
-          <div className={Styles.second} onClick={() => {hanlePageClick("Product Design & UX/UI");}}style={
-              currentPageKey === "Product Design & UX/UI" ? {backgroundColor: "#00da49",}: null}>
-            <p style={currentPageKey === "Product Design & UX/UI"? {backgroundColor: "#ffffff",color: "#004538",}: null}>
+          <div
+            className={Styles.second}
+            onClick={() => {
+              hanlePageClick('Product Design & UX/UI')
+            }}
+            style={
+              currentPageKey === 'Product Design & UX/UI'
+                ? { backgroundColor: '#00da49' }
+                : null
+            }
+          >
+            <p
+              style={
+                currentPageKey === 'Product Design & UX/UI'
+                  ? { backgroundColor: '#ffffff', color: '#004538' }
+                  : null
+              }
+            >
               2
             </p>
             <p>Product Design & UX/UI</p>
@@ -76,22 +93,22 @@ function Services() {
           <div
             className={Styles.third}
             onClick={() => {
-              hanlePageClick("Branding & Strategy");
+              hanlePageClick('Branding & Strategy')
             }}
             style={
-              currentPageKey === "Branding & Strategy"
+              currentPageKey === 'Branding & Strategy'
                 ? {
-                    backgroundColor: "#00da49",
+                    backgroundColor: '#00da49',
                   }
                 : null
             }
           >
             <p
               style={
-                currentPageKey === "Branding & Strategy"
+                currentPageKey === 'Branding & Strategy'
                   ? {
-                      backgroundColor: "#ffffff",
-                      color: "#004538",
+                      backgroundColor: '#ffffff',
+                      color: '#004538',
                     }
                   : null
               }
@@ -103,22 +120,22 @@ function Services() {
           <div
             className={Styles.fourth}
             onClick={() => {
-              hanlePageClick("Software Engineering");
+              hanlePageClick('Software Engineering')
             }}
             style={
-              currentPageKey === "Software Engineering"
+              currentPageKey === 'Software Engineering'
                 ? {
-                    backgroundColor: "#00da49",
+                    backgroundColor: '#00da49',
                   }
                 : null
             }
           >
             <p
               style={
-                currentPageKey === "Software Engineering"
+                currentPageKey === 'Software Engineering'
                   ? {
-                      backgroundColor: "#ffffff",
-                      color: "#004538",
+                      backgroundColor: '#ffffff',
+                      color: '#004538',
                     }
                   : null
               }
@@ -130,22 +147,22 @@ function Services() {
           <div
             className={Styles.fifth}
             onClick={() => {
-              hanlePageClick("Scale & Maintenance");
+              hanlePageClick('Scale & Maintenance')
             }}
             style={
-              currentPageKey === "Scale & Maintenance"
+              currentPageKey === 'Scale & Maintenance'
                 ? {
-                    backgroundColor: "#00da49",
+                    backgroundColor: '#00da49',
                   }
                 : null
             }
           >
             <p
               style={
-                currentPageKey === "Scale & Maintenance"
+                currentPageKey === 'Scale & Maintenance'
                   ? {
-                      backgroundColor: "#ffffff",
-                      color: "#004538",
+                      backgroundColor: '#ffffff',
+                      color: '#004538',
                     }
                   : null
               }
@@ -155,11 +172,68 @@ function Services() {
             <p>Scale & Maintenance</p>
           </div>
         </div>
+        <div className={Styles.resp_list}>
+          <div
+            className={
+              currentPageKey === 'Research & Product Discovery'
+                ? Styles.select
+                : ''
+            }
+            onClick={() => {
+              hanlePageClick('Research & Product Discovery')
+            }}
+          >
+            <p>1</p>
+          </div>
+          <div
+            className={
+              currentPageKey === 'Product Design & UX/UI' ? Styles.select : ''
+            }
+            onClick={() => {
+              hanlePageClick('Product Design & UX/UI')
+            }}
+          >
+            <p>2</p>
+          </div>
+          <div
+            className={
+              currentPageKey === 'Branding & Strategy' ? Styles.select : ''
+            }
+            onClick={() => {
+              hanlePageClick('Branding & Strategy')
+            }}
+          >
+            <p>3</p>
+          </div>
+          <div
+            className={
+              currentPageKey === 'Software Engineering' ? Styles.select : ''
+            }
+            onClick={() => {
+              hanlePageClick('Software Engineering')
+            }}
+          >
+            <p>4</p>
+          </div>
+          <div
+            className={
+              currentPageKey === 'Scale & Maintenance' ? Styles.select : ''
+            }
+            onClick={() => {
+              hanlePageClick('Scale & Maintenance')
+            }}
+          >
+            <p>5</p>
+          </div>
+        </div>
         <div className={Styles.line}></div>
-        <ServicesText text={pages[currentPageKey]?.text} title={currentPageKey} />
+        <ServicesText
+          text={pages[currentPageKey]?.text}
+          title={currentPageKey}
+        />
       </div>
     </div>
-  );
+  )
 }
 
-export default Services;
+export default Services
