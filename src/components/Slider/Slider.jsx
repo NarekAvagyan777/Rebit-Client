@@ -65,6 +65,7 @@ export default function Slider() {
 
           <div className={styles.memberWrapper}>
             <Image src={member} alt="member" />
+            <div className={styles.blured}/>
           </div>
         </div>
         <div className={styles.sliderElement}>
@@ -87,6 +88,7 @@ export default function Slider() {
 
           <div className={styles.memberWrapper}>
             <Image src={member} alt="member" />
+            <div className={styles.blured}></div>
           </div>
         </div>
         <div className={styles.sliderElement}>
@@ -110,6 +112,7 @@ export default function Slider() {
 
           <div className={styles.memberWrapper}>
             <Image src={member} alt="member" />
+            <div className={styles.blured}></div>
           </div>
         </div>
       </Carousel>

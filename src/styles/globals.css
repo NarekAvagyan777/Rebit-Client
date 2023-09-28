@@ -62,8 +62,8 @@ body {
   text-decoration: none;
 } */
 
-@media (prefers-color-scheme: dark) {
-  /* html {
-    color-scheme: dark;
-  } */
+@media screen and (max-width: 768px) {
+  .control-dots{
+    bottom: -32px !important
+  }
 }
