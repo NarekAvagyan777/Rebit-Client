@@ -9,12 +9,13 @@
   display: flex;
   justify-content: space-between;
   padding: 24px 40px 0px;
-  background: linear-gradient(
-    138deg,
-    #dddfe1 0%,
-    rgba(221, 223, 225, 0.5) 100%
-  );
+//   background: linear-gradient(
+//     138deg,
+//     #dddfe1 0%,
+//     rgba(221, 223, 225, 0.5) 100%
+//   );
   border-radius: 16px;
+  background-color: #dddfe1;
 
   &__text_block {
     display: flex;
@@ -75,9 +76,6 @@
   .container {
     margin: 0 auto 80px;
     padding: 0 15px;
-
-
-
   }
   .sliderElement {
     flex-direction: column-reverse;
@@ -108,8 +106,9 @@
     display: flex;
     width: 263px;
     min-height: 27px;
+    flex-shrink: 0;
     // background-color: #fff;
-    // z-index: 2;
+    z-index: 1;
     position: absolute;
     background: linear-gradient(
       180deg,
