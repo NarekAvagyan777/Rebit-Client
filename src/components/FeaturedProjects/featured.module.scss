@@ -10,11 +10,13 @@
   font-size: 40px;
   line-height: 60px;
   color: #004538;
+  font-weight: 700;
 }
 
 .content_wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .itemCont {
   display: flex;
@@ -25,6 +27,7 @@
   max-width: 420px;
 }
 .dashBoard__green {
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +38,7 @@
   overflow: hidden;
 }
 .dashBoard__blue {
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,11 +71,11 @@
   transform: translateY(-10px);
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
   .content_wrapper {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-  
 }

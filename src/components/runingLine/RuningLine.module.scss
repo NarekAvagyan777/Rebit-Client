@@ -98,4 +98,14 @@
   }
 }
 
-
+@media only screen and (max-width: 768px) {
+  .textWrapper {
+    &__text {
+      color: #1e2322;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+    }
+  }
+}
