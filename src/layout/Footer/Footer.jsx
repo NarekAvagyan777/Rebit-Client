@@ -32,9 +32,7 @@ export default function Footer() {
           <div
             className={`${styles.content_wrapper__inner} ${styles.content_wrapper__container}`}
           >
-            <div
-              style={{ display: 'flex', marginTop: '40px', minWidth: '480px' }}
-            >
+            <div style={{ display: 'flex', marginTop: '40px' }}>
               <div
                 className={`${styles.content_wrapper__element} ${styles.links_block}`}
               >
@@ -78,7 +76,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className={styles.content_wrapper__contact_block}>
-                <div style={{display:'block'}}>
+                <div style={{ display: 'block' }}>
                   <div>
                     <Image src={mail} alt="mail" />
                     <span>hello@rebit.ai</span>
