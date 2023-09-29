@@ -8,7 +8,10 @@ import { TwitterIcon, FacebookIcon, LinkedinIcon } from '@/components'
 import mail from '@/assets/image/icons/mail.svg'
 import phone from '@/assets/image/icons/phone_in_talk.svg'
 import location from '@/assets/image/icons/location.svg'
+import map from '@/assets/image/img/map.svg'
+
 import tw from '@/assets/image/icons/tw.svg'
+import { BLOCKED_PAGES } from 'next/dist/shared/lib/constants'
 
 export default function Footer() {
   return (
@@ -26,38 +29,43 @@ export default function Footer() {
             </p>
             <p>© Rebit.ai 2023</p>
           </div>
-          <div style={{ display: 'flex', width: '100%' }} className={styles.content_wrapper__container}>
+          <div
+            className={`${styles.content_wrapper__inner} ${styles.content_wrapper__container}`}
+          >
             <div
-              className={`${styles.content_wrapper__element} ${styles.links_block}`}
+              style={{ display: 'flex', marginTop: '40px', minWidth: '480px' }}
             >
-              <p>
-                <a href="">Work</a>
-              </p>
-              <p>
-                <a href="">Services</a>
-              </p>
-              <p>
-                <a href="">About Us</a>
-              </p>
-              <p>
-                <a href="">Careers</a>
-              </p>
-            </div>
+              <div
+                className={`${styles.content_wrapper__element} ${styles.links_block}`}
+              >
+                <p>
+                  <a href="">Work</a>
+                </p>
+                <p>
+                  <a href="">Services</a>
+                </p>
+                <p>
+                  <a href="">About Us</a>
+                </p>
+                <p>
+                  <a href="">Careers</a>
+                </p>
+              </div>
 
-            <div
-              className={`${styles.content_wrapper__element} ${styles.links_block}`}
-            >
-              <p>
-                <a href="">Blog</a>
-              </p>
-              <p>
-                <a href="">Academy</a>
-              </p>
-              <p>
-                <a href="">Privacy Policy</a>
-              </p>
+              <div
+                className={`${styles.content_wrapper__element} ${styles.links_block}`}
+              >
+                <p>
+                  <a href="">Blog</a>
+                </p>
+                <p>
+                  <a href="">Academy</a>
+                </p>
+                <p>
+                  <a href="">Privacy Policy</a>
+                </p>
+              </div>
             </div>
-
             <div
               className={`${styles.content_wrapper__element} ${styles.contact_block}`}
             >
@@ -70,17 +78,25 @@ export default function Footer() {
                 </a>
               </div>
               <div className={styles.content_wrapper__contact_block}>
-                <div>
-                  <Image src={mail} alt="mail"  />
-                  <span>hello@rebit.ai</span>
+                <div style={{display:'block'}}>
+                  <div>
+                    <Image src={mail} alt="mail" />
+                    <span>hello@rebit.ai</span>
+                  </div>
+                  <div>
+                    <Image src={phone} alt="phone" />
+                    <span>+374 77 701105</span>
+                  </div>
+                  <div>
+                    <Image src={location} alt="location" />
+                    <span>
+                      6, Tumanyan str,
+                      <br /> Yerevan, Armenia, 0001
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <Image src={phone} alt="phone" />
-                  <span>+374 77 701105</span>
-                </div>
-                <div>
-                  <Image src={location} alt="location" />
-                  <span>6, Tumanyan str, Yerevan, Armenia, 0001</span>
+                <div className={styles.map_block}>
+                  <Image src={map} alt="map" width={120} />
                 </div>
               </div>
             </div>
