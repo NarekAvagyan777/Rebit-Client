@@ -55,6 +55,9 @@ function Header({ route }) {
   //     mediaQuery.removeEventListener('change', handleMediaQuery)
   //   }
   // }, [])
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
   const handleOpen = () => {
     setMenuOpen((prev) => !prev)
   }
@@ -145,6 +148,7 @@ function Header({ route }) {
               <Link
                 href="/Work"
                 style={route === '/Work' ? { color: '#00DA49' } : {}}
+                onClick={closeMenu}
               >
                 Work
               </Link>
@@ -153,6 +157,7 @@ function Header({ route }) {
               <Link
                 href="/Services"
                 style={route === '/Services' ? { color: '#00DA49' } : {}}
+                onClick={closeMenu}
               >
                 Services
               </Link>
@@ -161,6 +166,7 @@ function Header({ route }) {
               <Link
                 href="/Startups"
                 style={route === '/Startups' ? { color: '#00DA49' } : {}}
+                onClick={closeMenu}
               >
                 Startups
               </Link>
@@ -169,6 +175,7 @@ function Header({ route }) {
               <Link
                 href="/aboutus"
                 style={route === '/aboutus' ? { color: '#00DA49' } : {}}
+                onClick={closeMenu}
               >
                 About Us
               </Link>
@@ -177,6 +184,7 @@ function Header({ route }) {
               <Link
                 href="/blog"
                 style={route === '/blog' ? { color: '#00DA49' } : {}}
+                onClick={closeMenu}
               >
                 Blog
               </Link>
@@ -185,6 +193,7 @@ function Header({ route }) {
               <Link
                 href="/academy"
                 style={route === '/academy' ? { color: '#00DA49' } : {}}
+                onClick={closeMenu}
               >
                 Academy
               </Link>
