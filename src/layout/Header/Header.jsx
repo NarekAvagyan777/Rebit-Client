@@ -74,12 +74,6 @@ function Header({ route }) {
       </div>
       <div className={header.container}>
         <nav>
-          {/* <div class={header.menu_icon} id="menu-icon">
-            <Image src={Menu} />
-          </div> */}
-          {/* <ul className={`${header.navList} ${menuOpen ? header.showNav : ''}`}>
-            
-          </ul> */}
           <ul className={header.navList}>
             <li className={header.navItem}>
               <Link
@@ -137,11 +131,16 @@ function Header({ route }) {
             <Image src={ArrowRight} alt="arrow right" />
           </button>
         </div>
-        <div className={`${header.icon_menu} ${menuOpen ? header.rotated_menu : ''}`} onClick={handleOpen}>
+        <div
+          className={`${header.icon_menu} ${
+            menuOpen ? header.rotated_menu : ''
+          }`}
+          onClick={handleOpen}
+        >
           <Image src={Menu} />
         </div>
         <nav className={`${header.resp_nav} ${menuOpen ? header.opened : ''}`}>
-          <ul className={header.dropDown}>
+          <ul className={`${header.dropDown} `}>
             <li className={header.navItem}>
               <Link
                 href="/Work"

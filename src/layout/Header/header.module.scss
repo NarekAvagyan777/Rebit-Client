@@ -103,9 +103,9 @@
   margin: 0 20px;
 }
 
-.navItem:last-child {
-  margin-right: 40px;
-}
+// .navItem:last-child {
+//   margin-right: 40px;
+// }
 
 .navItem a {
   color: #004538;
@@ -148,52 +148,44 @@
   //   // width: 100%;
   // }
 
-  // .resp_nav {
-  //   position: absolute;
-  //   left: 10px;
-  //   right: 10px;
-  //   top: 80px;
-  //   z-index: 999;
-  // }
-  // .dropDown {
-  //   background-color: #ffffff;
-  //   width: 100%;
-  // }
-  // .opened {
-  //   display: block;
-  // }
+  .resp_nav {
+    position: absolute;
+    display: flex;
+    left: 10px;
+    right: 10px;
+    top: 80px;
+    height: 0px;
+    overflow: hidden; /* Hide overflow when menu is closed */
+    background-color: #ffffff;
+    ul{
+      margin: 15px auto;
+    }
+  }
+  .dropDown {
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    height: 100%;
+    // max-height: 0;
+    // overflow: hidden;
+    transition: height 10s ease-in-out;
+  }
+  .opened {
+    height:300px;
+    display: flex;
+    transition: height 0.5s ease-in-out;
+    background-color: rgb(242, 242, 241);
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .header {
     padding: 0 16px;
   }
-  // .icon_menu {
-  //   display: flex;
-  // }
-  // .navList {
-  //   display: none;
-  // }
-  // .button {
-  //   display: none;
-  // }
-  // .header {
-  //   // width: 100%;
-  // }
-  // .resp_nav {
-  //   position: absolute;
-  //   left: 10px;
-  //   right: 10px;
-  //   top: 80px;
-  //   z-index: 999;
-  // }
-  // .dropDown {
-  //   background-color: #ffffff;
-  //   width: 100%;
-  // }
-  // .opened {
-  //   display: block;
-  // }
 }
 
 @media only screen and (min-width: 1024px) {
