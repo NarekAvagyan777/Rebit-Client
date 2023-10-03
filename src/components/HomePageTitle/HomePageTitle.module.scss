@@ -25,10 +25,15 @@
   display: block;
 }
 .logo_container {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+}
+.logo_wrapper{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
+}    
+
 
 .button {
   // width: 120.17px;
@@ -89,11 +94,12 @@
   .logo_container {
     overflow-x: auto;
     white-space: nowrap;
-    // scrollbar-width: none;
+    scrollbar-width: none;
     margin-bottom: 80px;
   }
   .logo_wrapper {
     display: flex;
+    justify-content: space-between;
     gap: 90px; /* Adjust the gap between logos as needed */
   }
 

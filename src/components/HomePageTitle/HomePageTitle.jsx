@@ -31,10 +31,10 @@ function HomePageTitle() {
         </div>
       </div>
       <div className={styles.logo_container}>
-      <div className={styles.logo_wrapper}>
-        {logos.map((logo, index) => (
-          <Image key={index} src={logo} height={36} alt="homepage title" />
-        ))}
+        <div className={styles.logo_wrapper}>
+          {logos.map((logo, index) => (
+            <Image key={index} src={logo} height={36} alt="homepage title" />
+          ))}
         </div>
       </div>
     </div>

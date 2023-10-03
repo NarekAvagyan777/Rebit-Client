@@ -35,8 +35,9 @@
   display: flex;
   flex-direction: column;
   // width: 500px;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-content: space-between;
+  gap: 16px;
 
   div :first-child {
     display: flex;
