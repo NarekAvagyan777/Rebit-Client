@@ -32,7 +32,7 @@ export default function Footer() {
           <div
             className={`${styles.content_wrapper__inner} ${styles.content_wrapper__container}`}
           >
-            <div style={{ display: 'flex', marginTop: '40px' }}>
+            <div style={{ display: 'flex',  width:'inherit' }}>
               <div
                 className={`${styles.content_wrapper__element} ${styles.links_block}`}
               >
