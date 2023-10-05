@@ -32,18 +32,18 @@ export default function Footer() {
           <div
             className={`${styles.content_wrapper__inner} ${styles.content_wrapper__container}`}
           >
-            <div style={{ display: 'flex',  width:'inherit' }}>
+            <div style={{ display: 'flex', width: 'inherit' }}>
               <div
                 className={`${styles.content_wrapper__element} ${styles.links_block}`}
               >
                 <p>
-                  <a href="">Work</a>
+                  <a href="/Work">Work</a>
                 </p>
                 <p>
-                  <a href="">Services</a>
+                  <a href="/Services">Services</a>
                 </p>
                 <p>
-                  <a href="">About Us</a>
+                  <a href="/aboutus">About Us</a>
                 </p>
                 <p>
                   <a href="">Careers</a>
@@ -54,10 +54,10 @@ export default function Footer() {
                 className={`${styles.content_wrapper__element} ${styles.links_block}`}
               >
                 <p>
-                  <a href="">Blog</a>
+                  <a href="/blog">Blog</a>
                 </p>
                 <p>
-                  <a href="">Academy</a>
+                  <a href="/academy">Academy</a>
                 </p>
                 <p>
                   <a href="">Privacy Policy</a>
