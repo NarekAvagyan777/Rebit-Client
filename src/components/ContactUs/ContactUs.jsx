@@ -116,13 +116,14 @@ function ContactUs() {
                 // style={{
                 //   borderBottomColor: !checked && errors.email ? 'red' : '#c3c7ca',
                 // }}
+                
                 className={`${styles.form_control} ${
                   !checked && errors.name ? styles.error_req : ''
                 }`}
-                c
+                
                 name="name"
                 placeholder="Name Surname"
-                value={formData.name}
+                value={formData.name.toString()}
                 onChange={(e) => handleInputChange(e)}
               />
               {errors.name ? (
@@ -134,7 +135,7 @@ function ContactUs() {
                 type="email"
                 placeholder="Email"
                 name="email"
-                value={formData.email}
+                value={formData.email.toString()}
                 onChange={(e) => handleInputChange(e)}
                 className={`${styles.form_control} ${
                   !checked && errors.email ? styles.error_req : ''
