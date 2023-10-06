@@ -29,11 +29,10 @@
   // justify-content: space-between;
   // align-items: center;
 }
-.logo_wrapper{
+.logo_wrapper {
   display: flex;
   justify-content: space-between;
-}    
-
+}
 
 .button {
   // width: 120.17px;
@@ -61,7 +60,7 @@
     transform: translateX(8px);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .wrapper {
     flex-direction: column;
     // align-items: center;

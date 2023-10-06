@@ -27,3 +27,9 @@
     align-items: center;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+  .workMainCont {
+    padding: 0 16px 80px 16px;
+  }
+}
