@@ -20,7 +20,7 @@ function WorkItem({ works }) {
             <Image
               src={work.img}
               alt={work.title}
-              width={520}
+              // width={520}
               className={styles.wotkImg}
             />
           </div>
