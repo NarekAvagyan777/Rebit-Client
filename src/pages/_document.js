@@ -6,10 +6,10 @@ export default function Document() {
       <Head>
         <meta name='keywords' content="web development, mobile development, software development, ui/ux, devops, ai models, consulting" />
         <link rel="shortcut icon" href="/LogoMark_color.png" />
-        {/* <link 
+        <link 
           rel="stylesheet"
           href="https://unpkg.com/react-responsive-carousel/lib/styles/carousel.min.css"
-        /> */}
+        />
       </Head>
     <body>
         <Main />

@@ -8,12 +8,12 @@ import member from '@/assets/image/img/member.png'
 export default function Slider() {
   return (
     <div className={styles.container}>
-      <Head>
-        {/* <link
+      {/* <Head>
+        <link
           rel="stylesheet"
           href="https://unpkg.com/react-responsive-carousel/lib/styles/carousel.min.css"
-        /> */}
-      </Head>
+        />
+      </Head> */}
       <Carousel
         showThumbs={false}
         infiniteLoop={true}
