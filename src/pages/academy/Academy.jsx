@@ -11,7 +11,7 @@ export default function index() {
         <meta name="description" content="about our academy" />
       </Head>
       <div className={styles.container}>
-        <Image src={Cms} width={375} />
+        <Image src={Cms} width={375} alt='Coming soon' />
       </div>
     </>
   )
