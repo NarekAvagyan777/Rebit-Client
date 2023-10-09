@@ -1,4 +1,7 @@
-import Head from "next/head";
+import Head from 'next/head'
+import Image from 'next/image'
+import Cms from '@/assets/image/img/coming.png'
+import styles from './academy.module.scss'
 
 export default function index() {
   return (
@@ -7,7 +10,9 @@ export default function index() {
         <title>Academy</title>
         <meta name="description" content="about our academy" />
       </Head>
-      <div>Academy</div>
+      <div className={styles.container}>
+        <Image src={Cms} width={375} />
+      </div>
     </>
   )
 }
