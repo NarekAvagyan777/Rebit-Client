@@ -18,7 +18,6 @@
   display: flex;
   gap: 120px;
   padding: 0;
- 
 }
 
 .titleContainer {
@@ -26,7 +25,7 @@
   position: sticky;
   top: 80px;
   height: max-content;
-  background-color: #fff; 
+  background-color: #fff;
   z-index: 100;
 
   div {
@@ -126,4 +125,113 @@
   width: 100%;
   gap: 16px;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 0 0 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    h1 {
+      display: none;
+    }
+  }
+  .innerContainer {
+    margin-top: 0;
+    gap: 40px;
+    flex-direction: column;
+
+    .titleContainer::-webkit-scrollbar {
+      display: none;
+    }
+    .titleContainer:first-child {
+      margin-left: 16px;
+    }
+    .titleContainer {
+      display: flex;
+      top: 80px;
+      overflow-x: auto;
+      white-space: nowrap;
+      gap: 20px;
+      border-bottom: 1px solid #dddfe1;
+      padding-bottom: 20px;
+
+      div {
+        a {
+          color: #1e2322 !important;
+          font-size: 16px !important;
+          font-style: normal !important;
+          font-weight: 500 !important;
+          line-height: 30px !important;
+        }
+      }
+      .active {
+        border-radius: 50px;
+        background: #004538 !important;
+
+        a {
+          color: #00da49 !important;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 30px; /* 187.5% */
+        }
+      }
+
+      .linkitem {
+        // margin-left: 16px;
+        display: flex;
+        padding: 8px 20px;
+        align-items: flex-start;
+        border-radius: 50px;
+        border: 1px solid #dddfe1;
+        background: #fff;
+      }
+
+      div {
+        display: flex;
+        margin: 0 0 16px 0;
+        padding: 12px 0px;
+        align-items: flex-start;
+        border-bottom: 1px solid #04509c;
+        flex-wrap: nowrap;
+
+        a {
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+
+          &:visited {
+            color: #1e2322;
+          }
+        }
+      }
+    }
+  }
+  .sticky {
+    position: sticky !important;
+    top: 290px !important;
+    background-color: white; /* Adjust as needed */
+    z-index: 100;
+    // display: flex;
+  }
+  .contentContainer {
+    padding: 0 16px;
+    h2 {
+      color: #004538;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40px; /* 133.333% */
+    }
+    P {
+      color: #1e2322;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px; /* 187.5% */
+    }
+  }
 }
