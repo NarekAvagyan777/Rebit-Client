@@ -61,6 +61,7 @@ export default function index() {
           </h1>
         </div>
         <div>
+          
           <div className={styles.content}>
             <div className={styles.fotoWrapper}>
               <Image src={Groupfoto} alt="Group foto" />
@@ -92,7 +93,9 @@ export default function index() {
               </div>
             </div>
           </div>
+
           <div className={styles.about}>
+
             <div className={styles.about_container}>
               <div className={styles.titleWrapper}>
                 <p className={styles.text}>We are</p>
@@ -136,6 +139,7 @@ export default function index() {
                 </div>
               </div>
             </div>
+
             <div className={styles.aboutus}>
               <div>
                 <p>Our mission</p>
@@ -157,6 +161,7 @@ export default function index() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -44,14 +44,12 @@
   justify-content: space-between;
 }
 .project_info {
-  /* Your common styles for the outer div */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 10px;
 
   p {
-    /* Styles for all <p> elements within .project-info */
     color: #1e2322;
     font-size: 16px;
     font-style: normal;
@@ -132,8 +130,16 @@
     align-items: stretch;
     gap: 80px;
     margin-bottom: 120px;
+
     div {
       align-self: center;
+      p {
+        color: #1e2322;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+      }
     }
   }
   #mission {
@@ -200,4 +206,109 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    padding: 80px 16px;
+    margin: 0 auto;
+    gap: 80px;
+
+    h1 {
+      color: #004538;
+      font-size: 40px;
+      line-height: 60px;
+      text-align: left;
+    }
+  }
+
+  .content {
+    display: block;
+    margin-bottom: 40px;
+
+    .fotoWrapper > img {
+      width: 343px;
+    }
+
+    .description {
+      p {
+        color: #1e2322;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 30px;
+      }
+    }
+
+    .project {
+      gap: 24px;
+    }
+    .project_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      p {
+        color: #1e2322;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+      }
+
+      p:nth-child(2) {
+        color: #00da49;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 80px; /* 166.667% */
+      }
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .text {
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 40px;
+    }
+    .changing_text {
+      font-size: 44px !important;
+      font-style: normal !important;
+      font-weight: 800 !important;
+      line-height: 60px !important;
+    }
+    .about_container {
+      display: block;
+    }
+
+    .aboutus {
+      display: block;
+    }
+    .mission_container {
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+      img {
+        width: 343px;
+      }
+      //
+    }
+    .mission_container > .fotoWrapper {
+      order: 1;
+    }
+    // .fotoWrapper {
+    //   order: 2;
+    // }
+    .change_image > img {
+      width: 343px;
+    }
+  }
 }
