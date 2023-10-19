@@ -1,5 +1,9 @@
 .workMainCont {
   padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 120px;
 }
 .title_container {
   display: flex;
@@ -8,14 +12,21 @@
   padding-top: 120px;
   h1 {
     color: #004538;
+    font-size: 40px;
+    font-style: normal;
     font-weight: 700;
     line-height: 60px;
   }
 }
 .works_container {
   display: flex;
-  // width: 100%;
   margin-top: 80px;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+.work_item {
+  // margin-bottom: 20px; /* Optional margin between items */
 }
 @media screen and (max-width: 768px) {
   .workMainCont {
@@ -28,7 +39,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width:1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .workMainCont {
     padding: 0 16px 80px 16px;
   }
