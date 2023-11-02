@@ -18,6 +18,7 @@
   display: flex;
   gap: 120px;
   padding: 0;
+  padding-bottom: 80px;
 }
 
 .titleContainer {
@@ -56,6 +57,8 @@
   // display: flex;
 }
 .contentContainer {
+    
+
   h2 {
     color: #004538;
     font-size: 40px;
@@ -91,9 +94,9 @@
 .contentContainer > p {
   margin-bottom: 20px;
 }
-.contentContainer:not(:first-child) {
-  margin-top: 80px;
-}
+// .contentContainer:not(:first-child) {
+//   margin-top: 80px;
+// }
 
 .titleContainer {
   .active {
@@ -137,7 +140,7 @@
     }
   }
   .innerContainer {
-    margin-top: 0;
+    margin-top: 60px;
     gap: 40px;
     flex-direction: column;
 
@@ -154,7 +157,8 @@
       white-space: nowrap;
       gap: 20px;
       border-bottom: 1px solid #dddfe1;
-      padding-bottom: 20px;
+      // padding-bottom: 20px;
+      // margin-bottom: 50px;
 
       div {
         a {
@@ -219,6 +223,7 @@
   }
   .contentContainer {
     padding: 0 16px;
+    padding-bottom: 80px;
     h2 {
       color: #004538;
       font-size: 30px;

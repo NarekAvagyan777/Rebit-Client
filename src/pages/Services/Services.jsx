@@ -1,162 +1,137 @@
 // "use client";
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import styles from "@/pages/Services/Services.module.scss";
-import Head from "next/head";
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import styles from '@/pages/Services/Services.module.scss'
+import Head from 'next/head'
 
 const ServiceItem = ({ item }) => {
   return (
     <div className={styles.service_item}>
       <p>{item}</p>
     </div>
-  );
-};
+  )
+}
 
 function Services() {
-  const router = useRouter();
-  const [isSticky, setIsSticky] = useState(false);
+  const router = useRouter()
+  const [isSticky, setIsSticky] = useState(false)
 
   const research = [
-    "Discover",
-    "Kickoff Meeting",
-    "Stakeholder Interviews",
-    "Problem Framing",
-    "Market Analysis",
-    "User Interviews",
-    "User Personas",
-    "Affinity Mapping",
-    "Competitor Analysis",
-    "Benchmarking",
-    "Workshops",
-    "Functionality Prioritization",
-    "Roadmapping",
-  ];
+    'Discover',
+    'Kickoff Meeting',
+    'Stakeholder Interviews',
+    'Problem Framing',
+    'Market Analysis',
+    'User Interviews',
+    'User Personas',
+    'Affinity Mapping',
+    'Competitor Analysis',
+    'Benchmarking',
+    'Workshops',
+    'Functionality Prioritization',
+    'Roadmapping',
+  ]
   const design = [
-    "UX/UI",
-    "User Experience Meeting",
-    "Design Systems",
-    "Product Design",
-    "User Testing",
-    "Wireframes",
-    "User Flows",
-    "Journey Mapping",
-    "Prototyping",
-    "UI Kit",
-    "UI Design",
-    "Mockups",
-    "Icons",
-    "Heuristic Evaluation",
-    "Usability Testing",
-    "User Interface",
-    "UX Design",
-    "Contextual Inquiry",
-  ];
+    'UX/UI',
+    'User Experience Meeting',
+    'Design Systems',
+    'Product Design',
+    'User Testing',
+    'Wireframes',
+    'User Flows',
+    'Journey Mapping',
+    'Prototyping',
+    'UI Kit',
+    'UI Design',
+    'Mockups',
+    'Icons',
+    'Heuristic Evaluation',
+    'Usability Testing',
+    'User Interface',
+    'UX Design',
+    'Contextual Inquiry',
+  ]
   const branding = [
-    "Branding Research",
-    "Naming",
-    "Brand Identity",
-    "Logo",
-    "Identity Guidelines",
-    "Rebranding",
-    "Marketing Materials",
-    "SEO",
-    "Content Writing",
-    "Verbal Identity",
-    "Visual Identity",
-    "Social Media",
-    "Brand Illustrations",
-    "Pitch Deck",
-  ];
+    'Branding Research',
+    'Naming',
+    'Brand Identity',
+    'Logo',
+    'Identity Guidelines',
+    'Rebranding',
+    'Marketing Materials',
+    'SEO',
+    'Content Writing',
+    'Verbal Identity',
+    'Visual Identity',
+    'Social Media',
+    'Brand Illustrations',
+    'Pitch Deck',
+  ]
   const software = [
-    "Frontend Engineering",
-    "Backend Engineering",
-    "Mobile App",
-    "React",
-    "Python",
-    "Web Development",
-    "iOS Development",
-    "Swift",
-    "Android Development",
-    "Kotlin",
-    "Vue",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Node.js",
-    "React Native",
-    "PHP",
-  ];
+    'Frontend Engineering',
+    'Backend Engineering',
+    'Mobile App',
+    'React',
+    'Python',
+    'Web Development',
+    'iOS Development',
+    'Swift',
+    'Android Development',
+    'Kotlin',
+    'Vue',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Node.js',
+    'React Native',
+    'PHP',
+  ]
   const scale = [
-    "Discover",
-    "Kickoff Meeting",
-    "Stakeholder Interviews",
-    "Problem Framing",
-    "Market Analysis",
-    "User Interviews",
-    "User Personas",
-    "Affinity Mapping",
-    "Competitor Analysis",
-    "Benchmarking",
-    "Workshops",
-    "Functionality Prioritization",
-    "Roadmapping",
-  ];
+    'Discover',
+    'Kickoff Meeting',
+    'Stakeholder Interviews',
+    'Problem Framing',
+    'Market Analysis',
+    'User Interviews',
+    'User Personas',
+    'Affinity Mapping',
+    'Competitor Analysis',
+    'Benchmarking',
+    'Workshops',
+    'Functionality Prioritization',
+    'Roadmapping',
+  ]
 
   useEffect(() => {
     const idHashMapping = {
-      research: "researches",
-      design: "designes",
-      branding: "brandinges",
-      software: "softwarees",
-      scale: "scalees",
-    };
+      research: 'researches',
+      design: 'designes',
+      branding: 'brandinges',
+      software: 'softwarees',
+      scale: 'scalees',
+    }
 
-    if (router.asPath.includes("#")) {
-      const last = router.asPath.split("#")[1];
+    if (router.asPath.includes('#')) {
+      const last = router.asPath.split('#')[1]
 
-      const header = document.getElementById("header");
-      const elementId = idHashMapping[last];
-
+      const header = document.getElementById('header')
+      const elementId = idHashMapping[last]
+const height = window.innerWidth < 768 ? header.clientHeight + 80 : header.clientHeight
       if (elementId) {
-        const element = document.getElementById(elementId);
+        const element = document.getElementById(elementId)
         if (element) {
           const rect =
             element.getBoundingClientRect().top +
-            window.pageYOffset -
-            header.clientHeight;
-          // console.log('top', element.getBoundingClientRect().top)
-          // console.log('header', header.clientHeight);
-          // console.log('pageYOffset', window.pageYOffset);
-          // console.log('rect', rect)
-          window.scrollTo({ top: rect, behavior: "smooth" });
+              window.pageYOffset - height         
+          window.scrollTo({ top: rect, behavior: 'smooth' })
         }
       }
     }
-  });
+  })
+  console.log('router', router)
 
-  console.log("router", router);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const titleContainer = document.querySelector(`.${styles.titleContainer}`)
-  //     const container = document.querySelector(`.${styles.container}`)
-
-  //     const rect = container.getBoundingClientRect()
-  //     if (rect.top <= 0) {
-  //       setIsSticky(true)
-  //     } else {
-  //       setIsSticky(false)
-  //     }
-  //   }
-
-  //   window.addEventListener('scroll', handleScroll)
-
-  //   // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll)
-  //   }
-  // }, [])
+ 
   return (
     <>
       <Head>
@@ -168,40 +143,40 @@ function Services() {
         <div className={styles.innerContainer}>
           <div
             className={`${styles.titleContainer} ${
-              isSticky ? styles.sticky : ""
+              isSticky ? styles.sticky : ''
             }`}
           >
             <div
               className={`${styles.linkitem} ${
-                router.asPath === "/Services#research" ? styles.active : ""
+                router.asPath === '/Services#research' ? styles.active : ''
               }`}
             >
               <Link href="#research">Research & Product Discovery</Link>
             </div>
             <div
               className={`${styles.linkitem} ${
-                router.asPath === "/Services#design" ? styles.active : ""
+                router.asPath === '/Services#design' ? styles.active : ''
               }`}
             >
               <Link href="#design">Product Design & UX/UI</Link>
             </div>
             <div
               className={`${styles.linkitem} ${
-                router.asPath === "/Services#branding" ? styles.active : ""
+                router.asPath === '/Services#branding' ? styles.active : ''
               }`}
             >
               <Link href="#branding">Branding & Strategy</Link>
             </div>
             <div
               className={`${styles.linkitem} ${
-                router.asPath === "/Services#software" ? styles.active : ""
+                router.asPath === '/Services#software' ? styles.active : ''
               }`}
             >
               <Link href="#software">Software Engineering</Link>
             </div>
             <div
               className={`${styles.linkitem} ${
-                router.asPath === "/Services#scale" ? styles.active : ""
+                router.asPath === '/Services#scale' ? styles.active : ''
               }`}
             >
               <Link href="#scale">Scale & Maintenance</Link>
@@ -375,7 +350,7 @@ function Services() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Services;
+export default Services

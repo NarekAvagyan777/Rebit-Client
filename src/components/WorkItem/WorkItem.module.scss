@@ -58,9 +58,10 @@
   align-items: center;
   width: 100%;
   background: linear-gradient(to right, #8b81de 50%, #f8f8f8 50%);
-  height: 100%;
+  // height: 100%;
   overflow: hidden;
   border-radius: 16px;
+  padding: 120px 60px;
 }
 // .dashBoard {
 //   display: flex;
@@ -76,8 +77,8 @@
 }
 
 .wotkImg {
-  width: 520px;
-  height: 520px;
+  // width: 520px;
+  // height: 520px;
   transition: transform 0.7s, visibility 0.7s ease-in;
   &:hover {
     transform: scale(1.25);
@@ -143,40 +144,42 @@
     }
   }
   .work_item {
-    width: 100%;
-    height: auto;
+    width: 343px;
+    padding: 60px 30px;
+
+    // height: auto;
   }
   .wotkImg {
     width: 290px;
-    height: auto;
+    // height: auto;
   }
-  .dashBoard__green {
+  .dashBoard {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    // width: auto;
     height: 343px;
   }
   .dashBoard__blue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 343px;
-    height: 343px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // width: 343px;
+    // height: 343px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .works_container {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 120px;
-    padding: 0 0 80px 0;
+    // display: flex;
+    // justify-content: center;
+    // margin: 0 auto;
+    // flex-wrap: wrap;
+    // gap: 120px;
+    // padding: 0 0 80px 0;
   }
   .wotkImg {
-    width: 100vw;
-    height: auto;
+    // width: 100vw;
+    // height: auto;
   }
 }

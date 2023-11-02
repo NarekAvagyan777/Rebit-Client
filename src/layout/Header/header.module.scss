@@ -6,28 +6,31 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  background-color: #ffffff;
-  // z-index: 1000;
-}
-
-.sticky {
-  display: flex;
-  max-width: 1440px;
-  margin: 0 auto;
   position: fixed;
-  justify-content: space-between;
-  align-items: center;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  z-index: 999;
-  background: #ffffff;
-  animation: fadeInDown 0.4s ease-in-out; /* Apply the animation */
-  transition: 0.4s;
+
+  background-color: #ffffff;
+  z-index: 1000;
 }
+
+// .sticky {
+//   display: flex;
+//   max-width: 1440px;
+//   margin: 0 auto;
+//   position: fixed;
+//   justify-content: space-between;
+//   align-items: center;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   z-index: 999;
+//   background: #ffffff;
+//   animation: fadeInDown 0.4s ease-in-out; /* Apply the animation */
+//   transition: 0.4s;
+// }
 
 .sticky.active {
   top: 0; /* Bring the sticky header into view */
